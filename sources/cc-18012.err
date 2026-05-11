@@ -1,0 +1,33 @@
+sources/cc-18012.err errors
+
+
+== Style
+
+(XML Line 000160): Only one Symbols and Abbreviated Terms section in the standard
+(XML Line 000160): Symbols and Abbreviated Terms can only contain a definition list
+(XML Line 000233): Hanging paragraph in clause
+(XML Line 000310): Hanging paragraph in clause
+(XML Line 000359): Hanging paragraph in clause
+(XML Line 000555): Hanging paragraph in clause
+(XML Line 000608): Hanging paragraph in clause
+(XML Line 000627): Hanging paragraph in clause
+(XML Line 000769): Hanging paragraph in clause
+(XML Line 000851): Hanging paragraph in clause
+(XML Line 000944): Hanging paragraph in clause
+(XML Line 001012): Hanging paragraph in clause
+
+
+== Syntax
+
+(XML Line 000008:30): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000024:52): character content of element "revision-date" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000131:39): element "eref" missing required attributes "citeas" and "type"
+(XML Line 000174:83): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "formula", "hr", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "table" or "ul"
+(XML Line 000177:15): element "definitions" incomplete; missing required element "dl"
+(XML Line 000178:37): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "formula", "hr", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "table" or "ul"
+(XML Line 000184:35): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "formula", "hr", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "table" or "ul"
+(XML Line 000196:38): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "formula", "hr", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "table" or "ul"
+(XML Line 000219:22): element "definitions" incomplete; missing required element "dl"
+(XML Line 000220:37): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "formula", "hr", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "table" or "ul"
+(XML Line 000226:39): element "definitions" incomplete; missing required element "dl"
+(XML Line 001119:11): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"

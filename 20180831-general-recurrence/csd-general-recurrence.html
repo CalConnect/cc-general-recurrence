@@ -1,0 +1,2185 @@
+<?xml version="1.0"?>
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:epub="http://www.idpf.org/2007/ops">
+  <head><style>
+  <!--
+@charset "UTF-8";
+/*
+    0 CSS RESET
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass", sans-serif; }
+
+h1, h2, h3, h4, h5, h6, .h2Annex {
+  font-family: "Overpass", sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+
+dt {
+  grid-column-start: 1; }
+
+dd {
+  grid-column-start: 2; }
+
+dd p, dt p {
+  margin-top: 0px; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+    1. HTML & Body
+*/
+body {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  color: #1d1d1d;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.4em;
+  background-color: #ffffff; }
+
+main {
+  margin: 0 3em 0 6em; }
+
+#toc {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400; }
+
+/*
+    2. Responsive navigation layout
+*/
+@media (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    margin-right: 30px;
+    background-color: #f7f7f7; }
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #1d1d1d;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); }
+  .container {
+    padding-left: 360px; }
+  .rule.toc {
+    display: none; }
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list {
+    padding: 0;
+    margin: 0; } }
+
+@media (max-width: 768px) {
+  #toc {
+    padding: 0 1.5em 0 1.5em;
+    overflow: visible; } }
+
+#toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+#toc li {
+  padding: 5px 10px; }
+
+#toc a {
+  color: #485094;
+  text-decoration: none;
+  display: block; }
+
+#toc a:hover {
+  color: white; }
+
+#toc .h2 {
+  padding-left: 30px; }
+
+#toc .h3 {
+  padding-left: 50px; }
+
+#toc .toc-active a {
+  color: white; }
+
+#toc .toc-active, #toc li:hover {
+  background: #1d1d1d;
+  box-shadow: inset -5px 0px 10px -5px #1d1d1d !important; }
+
+#toc li:hover a {
+  color: white; }
+
+/*
+    Document types + stages
+*/
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 99;
+  /*box-shadow: -5px 0px 10px #1d1d1d*/ }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 98;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+
+.document-type {
+  position: relative;
+  width: 25px; }
+
+.document-stage {
+  position: relative;
+  width: 25px; }
+
+p.document-type, p.document-stage {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0; }
+
+p.document-type {
+  font-weight: 400;
+  height: 210px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+p.document-stage {
+  font-weight: 300;
+  height: 160px; }
+
+#standard-band {
+  background-color: #0ac442; }
+
+#standard {
+  border-bottom: solid 3px #0ac442; }
+
+#governance {
+  border-bottom: solid 3px #750697; }
+
+#governance-band {
+  background-color: #750697; }
+
+#guide {
+  border-bottom: solid 3px #48a0e7; }
+
+#guide-band {
+  background-color: #48a0e7; }
+
+.coverpage-maturity {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+#proposal {
+  border-bottom: solid 3px #00BFFF; }
+
+#proposal-band {
+  background-color: #00BFFF; }
+
+#working-draft {
+  border-bottom: solid 3px #fda706; }
+
+#working-draft-band {
+  background-color: #fda706; }
+
+#committee-draft {
+  border-bottom: solid 3px #fd06fd; }
+
+#committee-draft-band {
+  background-color: #fd06fd; }
+
+#draft-standard {
+  border-bottom: solid 3px #fdf906; }
+
+#draft-standard-band {
+  background-color: #fdf906; }
+
+#final-draft {
+  border-bottom: solid 3px #7e0d13; }
+
+#final-draft-band {
+  background-color: #7e0d13; }
+
+#published {
+  border-bottom: solid 3px #0ac442; }
+
+#published-band {
+  background-color: #0ac442; }
+
+#withdrawn {
+  border-bottom: solid 3px #a0a0a0; }
+
+#withdrawn-band {
+  background-color: #a0a0a0; }
+
+/*
+    3. TYPOGRAPHY
+*/
+/*
+    3.1 Titles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass", sans-serif;
+  color: #0e1a85;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.3em; }
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+
+h1#content {
+  margin-top: 2em; }
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 400; }
+
+/*
+  span[id^="toc"]:after {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: 0.8em;
+    color: #cfcfcf;
+    content: "\f0c1";
+  }
+  */
+.TermNum, .Terms, .AltTerms {
+  color: #485094;
+  font-weight: 400; }
+
+p.TermNum {
+  font-size: 0.9em;
+  line-height: 1em;
+  margin: 0;
+  margin-top: 2em; }
+
+p.Terms {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0; }
+
+/*
+  p.AltTerms {
+    font-style: italic;
+    margin: 0;
+  }
+  */
+span.obligation {
+  font-weight: 400; }
+
+/*
+    3.2 Links
+*/
+a, a:visited {
+  text-decoration: none;
+  color: #485094; }
+
+a:hover {
+  color: white;
+  background: #1d1d1d;
+  box-shadow: 3px 0 0 #1d1d1d, -3px 0 0 #1d1d1d;
+  /* padding: 2px 0 2px 0; */ }
+
+::selection {
+  background: #1d1d1d;
+  /* WebKit/Blink Browsers */
+  color: white; }
+
+::-moz-selection {
+  background: #1d1d1d;
+  /* Gecko Browsers */
+  color: white; }
+
+.contact-info a:hover {
+  color: #485094;
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0; }
+
+/*
+    3.3 Lists
+*/
+ul {
+  margin-left: 1.2em; }
+
+ul {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+
+ul > li:before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.2em; }
+
+li p {
+  display: inline; }
+
+li:first-child {
+  margin-top: 1em; }
+
+#toc ul {
+  margin-bottom: 0.25em; }
+
+#toc li {
+  list-style-type: none; }
+
+#toc li:before {
+  content: " ";
+  display: none; }
+
+/*
+    3.4 Rules
+*/
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #0e1a85;
+  margin: 2em 0; }
+
+h2 p {
+  display: inline; }
+
+/*
+    3.5 Bibliograhy
+*/
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+  text-indent: -2em; }
+
+/*
+    3.6 Source Code + figures
+*/
+.figure, .Sourcecode {
+  font-family: "Space Mono", monospace;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+
+.FigureTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+    3.7 Notes
+*/
+.Note {
+  background-color: #fff495;
+  color: #47430c;
+  padding: 1.2em;
+  margin: 2em 0 1em 0; }
+
+/*
+    3.8 Examples
+*/
+table.example {
+  background-color: #e1eef1; }
+
+td.example {
+  padding: 0 1em 0 1em;
+  margin: 2em 0 1em 0; }
+
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0; }
+
+/*
+    3.9 Tables
+*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em; }
+
+table, th, td {
+  border: 1px solid black;
+  font-size: 0.95em; }
+
+td, th {
+  padding: 1em; }
+
+td.header {
+  font-weight: 400; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/*
+  3.10 Footnotes
+*/
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+/*
+    3.11 Blockquotes
+*/
+.Quote {
+  background-color: #f7f7f7;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.QuoteAttribution {
+  text-align: right; }
+
+/*
+    3.12 Formulas
+*/
+.formula, .Formula {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+/*
+    3.13 Contact Info
+*/
+.contact-info {
+  background-color: #f7f7f7;
+  padding: 2em;
+  margin-top: 5em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.contact-info p, .contact-info a {
+  font-family: "Space Mono", monospace;
+  font-weight: 400; }
+
+.contact-info .name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0; }
+
+.contact-info .address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0; }
+
+/*
+    Keywords
+*/
+span.keyword {
+  font-weight: 600; }
+
+/*
+    Paragraphs
+*/
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+/* Admonitions */
+.Admonition, .admonition {
+  background-color: #ffb3b3;
+  /* color: #47430c;*/
+  padding: 0.5em;
+  margin: 1.5em 0 1.5em 0;
+  text-align: left; }
+
+.Admonition p, .admonition p {
+  margin: 0; }
+
+/*
+    4.0 Page header
+*/
+/*
+    4.1 Top Logo
+*/
+.wrapper-top {
+  background-color: #0e1a85;
+  /* background-image: url("img/dots@2x.png"); */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAACXBIWXMAABYlAAAWJQFJUiTwAAADwUlEQVR4nO3YgQ2AMAwDwcAiWZ1NizrH30lIeIEq9nPOGSDqPgC7+93v/suy3Mmvhx+6VAAIcwFAmc4nyzYAIMgGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAIS5AKCs3oFk2QYAJNkAIMwFAGX1DiTLNgAgyQYAYS4AKKt3IFm2AQBJNgAIcwFAWb0DybINAEiyAUCYCwDK6h1Ilm0AQJINAMJcAFBW70CybAMAkmwAEOYCgLJ6B5JlGwCQZAOAMBcAlNU7kCzbAIAkGwCEuQCgrN6BZNkGACTZACDMBQBl9Q4kyzYAIMkGAGEuACirdyBZtgEASTYACHMBQFm9A8myDQBIsgFAmAsAyuodSJZtAECSDQDCXABQVu9AsmwDAJJsABDmAoCyegeSZRsAkGQDgDAXAJTVO5As2wCAJBsAhLkAoKzegWTZBgAk2QAgzAUAZfUOJMs2ACDJBgBhLgAoq3cgWbYBAEk2AAhzAUBZvQPJsg0ASLIBQJgLAMrqHUiWbQBAkg0AwlwAUFbvQLJsAwCSbAAQ5gKAsnoHkmUbAJBkA4AwFwCU1TuQLNsAgCQbAFTNzA9ggAr9aahO8QAAAABJRU5ErkJggg==");
+  color: #ffffff;
+  padding: 2em 0; }
+
+.doc-number {
+  font-size: 0.5em;
+  font-family: "Overpass", sans-serif; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 900;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.title-section1 {
+  padding: 0 2em 0 3em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+/*
+    4.2 Document Identity
+*/
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+/*
+    4.3 Draft Warning
+*/
+.coverpage-warning {
+  border-top: solid 1px #f36f36;
+  border-bottom: solid 1px #f36f36;
+  margin: 1em 2em;
+  color: #485094;
+  padding: 1em; }
+
+.coverpage-warning .title {
+  color: #f36f36;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em; }
+
+/*
+    4.4 Copyright
+*/
+.copyright {
+  padding: 1em;
+  font-size: 0.8em;
+  text-align: left; }
+
+.copyright .name, .copyright .address {
+  color: #485094; }
+
+/*
+    5.0 Other styles
+*/
+/*
+To top button
+*/
+#myBtn {
+  font-family: "Space Mono", monospace;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+
+#myBtn:hover {
+  opacity: 1; }
+
+a.anchorjs-link:hover {
+  background: none;
+  color: #485094;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm 2cm 1cm; }
+
+@media print {
+  h1, .title-section1 {
+    page-break-before: always; }
+  #toggle, .document-stage-band,
+  .document-type-band, #myBtn {
+    display: none; }
+  .container {
+    padding-left: 0; }
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; }
+  #toc .toc-active a {
+    color: #485094; }
+  #toc .toc-active, #toc li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc li:hover a {
+    color: black; }
+  h1.toc-contents {
+    margin-top: 2em; } }
+
+-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />        <title>Date and time — General recurrence syntax</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--TOC script import-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+    <!--Font awesome import for the link icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+</head>
+  <body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container">
+    <div class="title-section"><div class="document-stage-band" id="standard-band">
+    <p class="document-stage">Working Draft</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">Calconnect Standard</p>
+</div>
+
+
+
+  <div id="toggle"> <span>&#x2022;</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+    <div class="doc-number">
+      <span class="docnumber">CD 18012(wd)</span>
+      <span class="docnumber-separator">:</span>
+      <span class="docyear">2018</span>
+    </div>
+
+    <div class="coverpage-title">
+      <span class="title-first">Date and time — General recurrence syntax</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span>The Calendaring and Scheduling Consortium</span>
+  </div>
+
+  <div class="coverpage-tc-name">
+    <span>TC VCARD</span>
+  </div>
+  </div>
+
+  <div class="title-section1">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="standard">Calconnect Standard</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <span class="coverpage-maturity" id="working-draft">Working Draft</span>
+</div>
+
+
+  <div class="coverpage-warning">
+    <span class="title">Warning for Drafts</span>
+
+    <p class="content">
+    This document is not a CalConnect Standard. It is distributed for review and
+    comment, and is subject to change without notice and may not be referred to as
+    a Standard. Recipients of this draft are invited to submit, with their
+    comments, notification of any relevant patent rights of which they are aware
+    and to provide supporting documentation.
+    </p>
+  </div>
+
+
+<div class="copyright">
+  <p class="year">
+    &#xA9; 2018 The Calendaring and Scheduling Consortium, Inc.
+  </p>
+
+  <p class="message">
+    All rights reserved. Unless otherwise specified, no part of this
+    publication may be reproduced or utilized otherwise in any form or by any
+    means, electronic or mechanical, including photocopying, or posting on the
+    internet or an intranet, without prior written permission. Permission can
+    be requested from the address below.
+  </p>
+
+<div class="contact-info">
+  <p class="name">The Calendaring and Scheduling Consortium, Inc.</p>
+  <p class="address">
+    4390 Chaffin Lane<br />
+    McKinleyville<br />
+    California 95519<br />
+    United States of America<br />
+    <br />
+    <a href="mailto:copyright@calconnect.org">copyright@calconnect.org</a><br />
+    <a href="www.calconnect.org">www.calconnect.org</a>
+  </p>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+
+
+
+</div></header>
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <div class="prefatory-section"><nav>
+  <h1 id="content">Contents</h1>
+  <div id="toc"></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+
+      <p>&#xA0;</p>
+    </div>
+    <br />
+    <main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <br />
+      <div>
+        <h1 class="ForewordTitle">Foreword</h1>
+        <p id="_3e889fd2-cab8-4aa2-8afc-698b56c00851">The Calendaring and Scheduling Consortium ("CalConnect") is global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.</p>
+        <p id="_8957d4e6-10b2-462d-a5cb-8d1dd23d38ff">CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.</p>
+        <p id="_5586416f-3a1a-4f08-94bb-0396ccde8631">The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.</p>
+        <p id="_f1361625-9bd6-44e9-8b58-e1857d3922cf">In particular the different approval criteria needed for the different types of
+CalConnect documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.</p>
+        <p id="_d72736be-5a1e-4bdd-983a-b647cd64fa26">Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).</p>
+        <p id="_dd34f6f7-c173-43df-ab20-19c45bb86cf0">Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.</p>
+        <p id="_7d134569-7acb-4679-8512-3ef262f311f7">This document was prepared by Technical Committee <i>VCARD</i>.</p>
+      </div>
+      <br />
+      <div class="Section3" id="introduction">
+        <h1 class="IntroTitle">Introduction</h1>
+        <p id="_92673bc7-a663-4e55-a938-f5470f3c1a5d">The iCalendar standard (<a href="#RFC5545">RFC 5545:2018</a>) has defined the de-facto standard
+for specifying recurring time intervals.</p>
+        <p id="_d582222d-1eb5-4c4d-b10f-070e214dcb50">However, its syntax is tightly bound to the syntax and assumptions
+of <a href="#RFC5545">RFC 5545:2018</a>, requiring a data model representation that assumes
+a hierarchy of properties, parameters and data types that are not
+necessarily provided in other date and time representations,
+such as the International Standard for date and time representation,
+<a href="#ISO8601">8601:2004</a>.</p>
+        <p id="_9f0812d8-3fca-4073-b833-fb15af89a9d4"><a href="#RFC5545">RFC 5545:2018</a> also relies on a number of indirect data inheritance
+rules that are not clearly specified and therefore not easily
+reproduced in other representations outside of iCalendar.</p>
+        <p id="_4b442362-e6bc-46e8-a511-2b2cc02d1c69">This document describes a method to specify recurring time intervals
+with repeat rules in representation in line with those of the time
+scale components and date and time representations described in
+<a href="#ISO8601">8601:2004</a>.</p>
+      </div>
+      <p class="zzSTDTitle1">Date and time&#x2009;&#x2014;&#x2009;General recurrence syntax</p>
+      <div id="scope">
+        <h1>1.&#xA0; Scope</h1>
+        <p id="_8076dcf0-6d3f-4d75-9026-cbad697f9767">The purpose of this document is to provide a standard representation
+of recurring time intervals with repeat rules in line with those of
+the time scale components and date and time representations described in
+<a href="#ISO8601">8601:2004</a>, while maintaining compatibility with the recurrence
+rule syntax specified as "RECUR" rules in <a href="#RFC5545">RFC 5545:2018</a>.</p>
+        <p id="_2e1a0685-79b9-4786-aa9f-9a9266468ec2">The representations described in this document utilizes numbers,
+alphabets and symbols defined in <a href="#ISOIEC646">646</a>. These representations
+are meant to be both human recognizable and machine readable.</p>
+      </div>
+      <div>
+        <h1>2.&#xA0; Normative references</h1>
+        <p>The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+        <p id="ISO8601" class="NormRef">8601:2004, <i> Data elements and interchange formats -- Information interchange -- Representation of dates and times</i></p>
+        <p id="CC18011" class="NormRef">CC 18011:--, <a rel="footnote" href="#fn:1" epub:type="footnote" id="fnref:1"><sup>1</sup></a>, <i>Date and time&#x2009;&#x2014;&#x2009;Explicit representation</i></p>
+      </div>
+      <div id="tda"><h1>3.&#xA0; Terms and definitions</h1><p>For the purposes of this document, the terms and definitions
+  given in CC 18011:-- and the following apply.</p>
+<div id="_terms_and_definitions"><h2>3.1. Terms and definitions</h2><h3 class="TermNum" id="term-repeat-rule">3.1.1&#xA0;<p class="Terms" style="text-align:left;">repeat rule</p></h3>
+  
+  <p id="_067499b9-2532-40bc-9c5f-0dfd20d3aad3">consists of a set of eligible time intervals (<a href="#term-eti">Clause 3.1.4</a>) and
+selection rules (<a href="#term-sel-rule">Clause 3.1.2</a>) that allows computation of a set of
+matching instants (<a href="#term-matching-instants">Clause 3.1.5</a>)</p>
+
+<h3 class="TermNum" id="term-sel-rule">3.1.2&#xA0;<p class="Terms" style="text-align:left;">selection rule</p></h3>
+  
+  <p id="_e73f2617-b53a-4d4a-b54c-19acec1bf383">rule specifying restrictions on the value of a time scale component
+(<a href="#ISO8601-1">ISO 8601-1:--, Clause 3.1.3.9</a>)</p>
+
+<h3 class="TermNum" id="_repeat_cycle">3.1.3&#xA0;<p class="Terms" style="text-align:left;">repeat cycle</p></h3>
+  
+  <p id="_a511e731-9c9a-43c3-9e5d-d9dc99f13082">set of repeating instants (<a href="#ISO8601-1">ISO 8601-1:--, Clause 3.1.1.2</a>), calculated by
+a specified start instant and specified duration
+(<a href="#ISO8601-1">ISO 8601-1:--, Clause 3.1.1.6</a>) gap between the repeating instants</p>
+
+<h3 class="TermNum" id="term-eti">3.1.4&#xA0;<p class="Terms" style="text-align:left;">eligible time interval</p></h3>
+  
+  <p id="_af1ee0a3-7d71-419c-9e6f-747d28e35f06">time interval (<a href="#ISO8601-1">ISO 8601-1:--, Clause 3.1.1.3</a>) eligible for matching
+using selection rules (<a href="#term-sel-rule">Clause 3.1.2</a>)</p>
+
+<h3 class="TermNum" id="term-matching-instants">3.1.5&#xA0;<p class="Terms" style="text-align:left;">matching instants</p></h3>
+  
+  <p id="_3baf8f19-4cb5-407a-8a19-ffdced54eef6">set of instants (<a href="#ISO8601-1">ISO 8601-1:--</a>), computed by a repeating rule
+(<a href="#term-repeat-rule">Clause 3.1.1</a>), that belongs within eligible time intervals
+(<a href="#term-eti">Clause 3.1.4</a>) and fulfills criteria set by specified selection rules
+(<a href="#term-sel-rule">Clause 3.1.2</a>)</p>
+</div><div id="symbols"><h2>3.2. Symbols</h2><h3 class="TermNum" id="symbols-general">3.2.1&#xA0;<p class="Terms" style="text-align:left;">General</p></h3><p id="_4fe3db70-1753-49ad-b82e-4dfad98c2a8f">Representations and expressions specified in this document make use of the symbols listed in <a href="#symbols-time-scale-component">Clause 3.2.2</a> through <a href="#symbols-separator">Clause 3.2.6</a>.</p><p id="_ba57e844-709c-4e02-8074-c6e0f2f46dc2">Representations (also referred to as "format representations") give rise to expressions for dates, times, intervals and recurring intervals.</p><p id="_1e252483-a234-43ad-a658-31dc6e563f62">To clearly separate date and time representations, from and the text, punctuation marks and associated symbols used to describe them, the following symbols are used to demarcate boundaries of expressions and representations in this document:</p><p id="_912c5bf7-e441-4c11-b5fd-443f086dad09">Quotation marks and brackets are not part of the expression or representation itself and must be omitted in implementation.</p><p id="_0121af44-67ed-4c88-85b4-1e33d656d80c">All characters used in date and time expressions and representations are part of the <a href="#ISOIEC646">646</a> repertoire, except for "hyphen", "minus" and "plus-minus". In an environment where use is made of a character repertoire based on <a href="#ISOIEC646">646</a>, "hyphen" and "minus" should be both mapped onto "hyphen-minus".</p><p id="_67b09f33-109e-488d-ab2a-2f869d022d15">The character "space" shall not be used in the expressions.</p>
+
+<table id="_a92925fe-4f22-4810-9ffb-3de71558f9ce" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE 1</td><td valign="top" class="example">
+  <p id="_4e89f604-59d9-4920-bb79-6b9074beb74c" class="example">[YYYY] is a format representation for a calendar year, where each Y is to be replaced by a single digit creating an expression, for example '1985'.</p>
+</td></tr></table>
+<table id="_36af455d-f224-4be3-82e7-2c2b908ca69e" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE 2</td><td valign="top" class="example">
+  <p id="_2c3eb984-2c34-42f2-8cc9-99445e9b2e25" class="example">The date and time representation [YYYY]["-"][MM]["-"][DD] gives rise to the expression '2003-02-10' which identifies 10 February 2003.</p>
+</td></tr></table>
+
+<ul id="_34b6c2eb-bc1d-4869-b1e5-5b2a2565707e">
+  <li>
+    <p id="_5adc935c-b025-4869-8dce-4266123532a9">single quotation marks enclose expressions (for example '1985'); in some cases they are omitted to reflect the actualities of the examples;</p>
+  </li>
+  <li>
+    <p id="_9431f451-6fab-4a0d-8459-55e7d79ccabc">all individual tokens that are part of a representation are contained between the open and close bracket symbols ("["` and "`]"), when used in a representation the bracket symbols are not part of any expression of that representation;<br /></p>
+    <table id="_4c6473ff-b9b1-467f-bc74-78dede41c30d" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_5916934c-3463-4793-924c-286cdf6b80d9" class="example">For the date and time representation [YYYY]["-"][MM]["-"][DD], [YYYY],  ["-"],  [MM],  ["-"],  and [DD] are individual tokens enclosed by brackets.</p>
+</td></tr></table>
+  </li>
+  <li>
+    <p id="_f90e5f62-e480-40c3-b3df-dbb5d54d57c7">when double quotations marks enclose a string within a representation, that string is a literal and becomes part of any expression of that representation.<br /></p>
+    <table id="_224bb34c-5099-42f6-b8be-b87e75970ee0" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_9af52e53-c827-4611-aba9-80ae604f90a6" class="example">The representation [i]["Y"] represents a positive integer followed by the symbol "Y". '12Y' meaning "12 years" is an expression of that representation.</p>
+</td></tr></table>
+  </li>
+</ul>
+
+
+
+<h3 class="TermNum" id="symbols-time-scale-component">3.2.2&#xA0;<p class="Terms" style="text-align:left;">Time scale component symbols</p></h3><p id="_4bbf1fbc-2d52-4f3f-9f85-82ae75e69795">The following time scale component symbols are in implied form, for the representation of date and time.</p>
+<dl id="_49770aec-cef7-4b74-b5a1-096c7414cc5b"><dt><p>year</p></dt><dd>
+    <p id="_1aa501e2-5478-42df-bc45-fa930b78b8fb">time scale component calendar year</p>
+  </dd><dt><p>month</p></dt><dd>
+    <p id="_48503bdc-2ed1-4bcb-9b8c-7dc4ec33b7dc">time scale component calendar month</p>
+  </dd><dt><p>week</p></dt><dd>
+    <p id="_80a6c04b-3e23-4adb-9d1a-7e8ce72c8f92">time scale component calendar week of year</p>
+  </dd><dt><p>day</p></dt><dd>
+    <p id="_047a4f02-705f-4a9a-8423-6c59d123e370">time scale component calendar day of month</p>
+  </dd><dt><p>dayk</p></dt><dd>
+    <p id="_404b6e58-4924-43dd-ae95-19e1dffb0915">time scale component calendar day of week</p>
+  </dd><dt><p>dayo</p></dt><dd>
+    <p id="_6c936b4e-c56e-4f3e-912d-aac312bb5fa6">time scale component calendar day of year</p>
+  </dd><dt><p>hour</p></dt><dd>
+    <p id="_77ba9573-1fb8-47fe-83ca-f91d122fb712">time scale component clock hour</p>
+  </dd><dt><p>min</p></dt><dd>
+    <p id="_96399eba-c467-4fcd-a23f-450d52838768">time scale component clock minute</p>
+  </dd><dt><p>sec</p></dt><dd>
+    <p id="_1d1683fc-c734-4ec0-b37f-48f523dfcc92">time scale component clock second</p>
+  </dd><dt><p>dec</p></dt><dd>
+    <p id="_ec532764-bb0a-4266-a5c9-419f56f1660e">time scale component decade</p>
+  </dd><dt><p>cent</p></dt><dd>
+    <p id="_40d77a7e-b877-4b75-9aaf-970470ef0a20">time scale component century</p>
+  </dd></dl>
+<h3 class="TermNum" id="symbols-composite">3.2.3&#xA0;<p class="Terms" style="text-align:left;">Composite component symbols</p></h3>
+  
+  <dl id="_6a06d933-85f6-42d0-abcf-4c0111db62ee"><dt><p>selection</p></dt><dd>
+    <p id="_4979014e-d106-4dea-a1a8-202fac79663e">representation for a set of selection rules as determined in <a href="#selection-general">Clause 5.1</a></p>
+  </dd></dl>
+
+<h3 class="TermNum" id="symbols-inplace">3.2.4&#xA0;<p class="Terms" style="text-align:left;">Symbols used in place of digits or signs</p></h3><p id="_9fb396a2-b35d-4a7e-bba0-dfca0d9a14e4">These symbols are used to represent characters in the date and time
+representations. They are used in representations only, and are
+replaced by one or more characters, as described, in expressions:</p>
+<dl id="_5fc1c872-9027-4253-8f65-ba100d4900b6"><dt><p>n</p></dt><dd>
+    <p id="_1bbb0fe7-6fb6-4598-9518-b8cd4fcf740d">a positive integer or value, may be left absent to signify an unbounded value</p>
+  </dd><dt><p>i</p></dt><dd>
+    <p id="_87088f92-856a-4216-aedd-82da765dcf7d">a positive integer</p>
+  </dd><dt><p>!</p></dt><dd>
+    <p id="_71e042a2-6072-4f81-b5a2-028c6ad2757a">indicates that the token following this symbol is optional (may be omitted)</p>
+  </dd></dl>
+<h3 class="TermNum" id="symbols-designator">3.2.5&#xA0;<p class="Terms" style="text-align:left;">Designator symbols</p></h3><p id="_ae8366e0-6c47-412f-9724-c472a5ddca77">These symbols are used to represent designators in the date and time expressions:</p>
+<dl id="_933d00ac-8287-413e-b319-37dbdfc2f5fc"><dt><p>"H"</p></dt><dd>
+    <p id="_87bb699e-1865-4a73-8dd7-f6f8d452b8a7">the hour designator, represented by the character "H", preceding a data element which represents the number of hours</p>
+  </dd><dt><p>"M"</p></dt><dd>
+    <p id="_57dfea68-cc62-4827-85a7-534612e9bca8">the month or minute designator, represented by the character "M", preceding a data element which represents the number of months or minutes</p>
+  </dd><dt><p>"P"</p></dt><dd>
+    <p id="_383aa515-fcee-464f-a32d-1d73b17d338a">the duration designator, represented by the character "P", preceding the component which represents the duration</p>
+  </dd><dt><p>"R"</p></dt><dd>
+    <p id="_475e1d7c-5cd7-4578-8bdb-9cabb6c68057">the recurring time interval designator, represented by the character "R"</p>
+  </dd><dt><p>"S"</p></dt><dd>
+    <p id="_b4fc582b-8a07-4951-837b-7e898b221abd">the second designator, represented by the character "S", preceding a data element which represents the number of seconds</p>
+  </dd><dt><p>"T"</p></dt><dd>
+    <p id="_c957ebbb-6bfa-4eee-8b1c-24dae66aa181">the time designator, represented by character "T", indicates:</p>
+    <ul id="_60b048bd-9d17-40b4-bd8a-5651fd203dab">
+  <li>
+    <p id="_57b6154c-7896-4853-81d9-852bd1f283c6">the start of the representation of local time of day to designate local time of day expressions as such,</p>
+  </li>
+  <li>
+    <p id="_e659af1e-7b48-4295-bee3-3f46ec31d8d5">the start of the representation of the time of day in date and time of day expressions,</p>
+  </li>
+  <li>
+    <p id="_f009fcaf-cc91-4791-a54a-759b98009e5e">the start of the representation of the number of hours, minutes or seconds in expressions of duration</p>
+  </li>
+</ul>
+  </dd><dt><p>"Y"</p></dt><dd>
+    <p id="_e33a73a6-6c83-41a9-ab6d-a5837984777f">the year designator, represented by the character "Y", preceding a data element which represents the number of years</p>
+  </dd><dt><p>"W"</p></dt><dd>
+    <p id="_8b309d27-4b84-4c63-8caa-b2e53508ade3">the week designator, represented by the character "W", preceding a data element which represents the ordinal number of a calendar week within the calendar year</p>
+  </dd><dt><p>"K"</p></dt><dd>
+    <p id="_3b98292e-9d22-48d8-bf08-9ad7db4bead2">the calendar day of week designator, represented by the character "K", preceding a data element which represents the ordinal number of a calendar day within a calendar week</p>
+  </dd><dt><p>"O"</p></dt><dd>
+    <p id="_5407dbdc-1b05-4440-a805-291bc385d35f">the calendar day of year designator, represented by the character "O", preceding a data element which represents the ordinal number of a calendar day within a calendar year</p>
+  </dd><dt><p>"Z"</p></dt><dd>
+    <p id="_ed06e7d2-459e-419f-8adf-ce352722e718">the UTC designator, represented by the character "Z", added to the end of a time representation to indicate that a time of day is represented as UTC of day.</p>
+  </dd><dt><p>"I"</p></dt><dd>
+    <p id="_cf91533a-d158-418e-b19d-2f4c7d90c3bf">the instance designator, represented by the character "I", indicates that a specific instance is to be selected within the time scale component</p>
+  </dd><dt><p>"J"</p></dt><dd>
+    <p id="_d90ae212-3b61-4053-81a0-17124aac1ece">the ordinal position designator, represented by the character "j", indicates that a specific ordinal position is to be selected from the existing value of the time scale component</p>
+  </dd><dt><p>"F"</p></dt><dd>
+    <p id="_37e8ce3f-3018-41a1-9dbc-9966fc39689c">the frequency designator, represented by the character "F", preceding the component which represents the frequency part of a repeating rule</p>
+  </dd><dt><p>"L"</p></dt><dd>
+    <p id="_71179d62-2a70-4ee5-bc1b-f63dc6e2c67d">the selection designator, represented by the character "L", preceding the component which represents the selection part of a repeating rule</p>
+  </dd><dt>"<i>x</i>"</dt><dd>
+    <p id="_f727a660-84c5-462b-8475-d0160c92d804">the representation of any character "<i>x</i>" as according to the textual representation of "<i>x</i>" in the <a href="#ISOIEC646">646</a> repertoire</p>
+  </dd></dl>
+<h3 class="TermNum" id="symbols-separator">3.2.6&#xA0;<p class="Terms" style="text-align:left;">Separator symbols</p></h3><p id="_02c467d8-e3e2-4af4-b645-9c81783b42eb">In date and time expressions and date and time representations, the following characters are used as separators.</p>
+<dl id="_fc6b413c-33a6-4649-990d-b17a34413a5c"><dt><p>"/" (solidus)</p></dt><dd>
+    <p id="_27fcc298-9caf-40ef-925d-a8865324ff6b">the "/" solidus character separates start and end times in the representation of a time interval, as well as the symbol 'R' from the remainder of a recurring time interval representation. A solidus may be replaced with a double hyphen ["--"] by mutual agreement of the communicating partners.</p>
+  </dd><dt><p>"." (period) and "," (comma)</p></dt><dd>
+    <p id="_0b355f6b-4e75-4519-adfa-a0cda31dc4de">the "." period and "," comma characters are decimal signs used to separate the integer part from the decimal fraction of a number.</p>
+  </dd></dl></div></div>
+      <div id="integer-ops">
+        <h1>4.&#xA0; Set notation</h1>
+        <div id="_general"><h2>4.1. General</h2>
+
+  <p id="_0b39075d-0219-4af9-942b-cd97e39f7370">A set is considered to be an orderless collection of elements.</p>
+</div>
+        <div id="integer-set"><h2>4.2. Integer set</h2><p id="_80ab7328-2dc0-4d97-9b87-0eda75322552">Curly braces enclosing a set of integers (with no specified order and
+separated by commas and zero or more spaces) are used to mean "allmembers of the set".</p>
+<p id="_5a6946c8-d651-49c9-931c-a2184599dea6">Empty spaces ([" "]) after or before the element divider ([","])
+within a set expression
+are considered superfluous and only allowed for better readability.
+The evaluation of a set expression should always omit such empty
+spaces.</p>
+<p id="_530922af-5b33-452e-8e83-a23d7a2adcb9" class="Sourcecode">intset&#xA0;=&#xA0;["{"][intexpr-1][","][intexpr-2][","]&#xA0;...&#xA0;[intexpr-n]["}"]</p>
+<p id="_da9f0f51-b096-44af-bf1f-71f5e1a82f70">Where,</p>
+<ul id="_fade5ad2-2794-4a9a-a3dd-d2c6e79d4926">
+  <li>
+    <p id="_374bcf5c-a1a1-4949-bbde-296e89bb0feb"><tt>intexpr-i</tt> is <tt>[i]</tt> (a positive integer) or <tt>[!]["-"][i]</tt> (a negative integer)</p>
+  </li>
+</ul>
+<table id="_97693909-b6b8-4e50-a054-f003d20d8cc7" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_2e390c08-16d2-418e-8aac-9b1e61afee71" class="example"><tt>{1, 3, 5}</tt> is a set of integers 1, 3 and 5.</p>
+</td></tr></table>
+<table id="_7888b7e6-d6f7-4ed2-b8a6-af27a0fbd3dc" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_7629e4a9-9eb2-43b6-b420-129280b13560" class="example"><tt>{-3, -6, 9}</tt> is a set of integers -3, -6 and 9.</p>
+</td></tr></table></div>
+        <div id="_date_and_time_expression_set"><h2>4.3. Date and time expression set</h2><p id="_ae00f09e-080b-4b7d-b73c-8aae332aedc7">The notation form specified in <a href="#integer-set">Clause 4.2</a> also applies to
+a set of date and time expressions.</p>
+<p id="_a0533be8-9e8a-438a-a72a-261535ef96ab" class="Sourcecode">exprset&#xA0;=&#xA0;["{"][expr-1][","][expr-2][","]&#xA0;...&#xA0;[expr-n]["}"]</p>
+<p id="_6f8bfab5-65ec-455e-8cbe-0f3048e8104c">Where,</p>
+<ul id="_1e553f46-8258-485f-8d22-e2cbf854ab4e">
+  <li>
+    <p id="_f33cd1f4-c884-46ef-9d11-0b9287743d46"><tt>[expr-i]</tt> is a valid date and time expression</p>
+  </li>
+</ul>
+<table id="_3683ff9f-b724-422b-97c2-210375432e9c" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_41727859-28dc-4a49-b564-6891c7a04f13" class="example"><tt>{1K,3K,5K}</tt> is a set that contains the expressions for Monday, Wednesday and Friday.</p>
+</td></tr></table></div>
+        <div id="int-expand"><h2>4.4. Integer set expansion for date and time expressions</h2><p id="_d76f767e-7d28-4f8a-8ac8-3d0b533c7df1">An integer set [intset] can replace a time component value [i] in a
+representation as long as the resulting expression is valid.</p>
+<p id="_29202c9c-9910-477d-b95e-2de01b9ab675" class="Sourcecode">intexpand&#xA0;=&#xA0;[intset][symbol(c)]</p>
+<p id="_5242c6af-c2c9-4bac-915b-edb0a6a218c0">Where,</p>
+<ul id="_b052d547-1ed7-4fbb-996b-b31643173b87">
+  <li>
+    <p id="_8b78bd94-5eef-46c3-ab0e-a86611ed7aa5"><tt>[symbol(c)]</tt> is the designated symbol for the time scale component.</p>
+  </li>
+</ul>
+<table id="_14927400-ddab-49c5-9da8-655c7c82ab98" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_a23a9874-b1f4-4fcb-b9ea-4fa62db7a0eb" class="example">If <tt>c</tt> is the timescale component "month", <tt>[symbol(month)]</tt> is the symbol for the calendar month time scale component&#x2009;&#x2014;&#x2009;the designated symbol <tt>["M"]</tt>.</p>
+</td></tr></table>
+<table id="_1390fc68-0bb6-4e17-9300-91fcc1ebe8ad" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_feba79a0-c9c7-4c5a-81ad-7d0126c65a00" class="example"><tt>{1,2,3}K</tt> is a set that expands to <tt>{1K,2K,3K}</tt>, which contains the expressions to specify Monday, Wednesday and Friday.</p>
+</td></tr></table>
+<table id="_1f1d895c-de47-4b84-bcfc-4bd8030f0822" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_e105c514-12df-4fd8-8c69-e9156bbfd040" class="example"><tt>2018YGP2M{1,3,5}I</tt> expresses a shorter form of the set representation of
+<tt>{ 2018Y1M1D/2018Y2M28D, 2018Y5M1D/2018Y6M30D, 2018Y9M1D/2018Y10M31D }</tt>
+that uses time intervals from <a href="#CC18011">CC 18011:--</a>.</p>
+</td></tr></table></div>
+        <div id="expr-expand"><h2>4.5. Expression set expansion for date and time expressions</h2><p id="_f534bb67-668f-4892-a195-199c4a85cf12">An expression set [exprset] can be expanded with another date and time
+expression as long as the resulting expression is valid.</p>
+<p id="_61a6e532-8409-4397-87a2-2ac25be04fc0" class="Sourcecode">exprexpand&#xA0;=&#xA0;[exprset][expr]</p>
+<p id="_8833071a-8870-411d-a8da-3c5d939d87c9">Where,</p>
+<ul id="_97c02668-a0bc-40b6-bc96-cd9c31c8ba91">
+  <li>
+    <p id="_69b8287f-91a5-4d10-8976-a016e6247386"><tt>[expr]</tt> is a date time expression, such that when conjoined with individual
+elements of <tt>[exprset]</tt> the resulting expanded set of date and time expressions
+remain valid.</p>
+  </li>
+</ul>
+<table id="_9281d48c-a464-4303-8838-13fb19b1c304" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_aafa1df4-3f86-4d14-ac1d-9d54a34daf15" class="example"><tt>{2018Y3M,2019Y2M}1D</tt> is a set that expands to <tt>{2018Y3M1D,2019Y2M1D}</tt>, which contains the date expressions for year 2018 March 1st and year 2019 February 1st.</p>
+</td></tr></table>
+<table id="_d8e8dde0-5c0c-4e0e-9153-33a7e2cbca78" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_7c1ab466-ec94-4d58-b3a0-e30063ede9f9" class="example"><tt>{1778Y3M,1889Y2M}{10,20}D</tt> utilizes the syntax of <a href="#int-expand">Clause 4.4</a> and <a href="#expr-expand">Clause 4.5</a>, where the set expands to <tt>{1778Y3M10D,1889Y2M10D,1778Y3M20D,1889Y2M20D}</tt>. Since the order of elements are not specified within a set, the expression is equivalent to <tt>{1778Y3M10D,1778Y3M20D,1889Y2M10D,1889Y2M20D}</tt>.</p>
+</td></tr></table></div>
+      </div>
+      <div id="selection">
+        <h1>5.&#xA0; Selection of date and time</h1>
+        <div id="selection-general"><h2>5.1. General</h2><p id="_91cab94a-2a65-4003-aafc-de7c6f596787">A time scale component can be replaced with selection rules to specify
+matching criteria of certain time scale unit values. This clause builds
+upon the "explicit" syntax of time scale components specified in
+<a href="#CC18011">CC 18011:--</a>.</p>
+<p id="_586498b0-b7a2-484c-9512-b48b1d1b53fd">[selection] may include zero or more selection rules.</p>
+<p id="_ccd023a0-6767-4c8c-8e00-852a074954e8" class="Sourcecode">selection&#xA0;=&#xA0;[selection-rule-1]...[selection-rule-n]</p>
+<p id="_6c2f264d-098c-4ffc-8784-bc5ae9a70bea">Generally, selection rules should be placed in the order where the
+higher-order time scale components are placed on the left, and the
+lower-order ones placed on the right.</p>
+<p id="_1914cfe4-2d47-4c43-9344-08cdb2eaadb2">While it is possible to translate the selection rules specified in this
+document to the "RECUR" syntax specified in <a href="#RFC5545">RFC 5545:2018</a> in most cases;
+exceptions and limitations are noted within context of the rules
+specified below.</p></div>
+        <div id="selection-months"><h2>5.2. Selection of calendar months</h2><p id="_8b43d1d6-7dfa-4301-85b1-f73bd0fbf2c5">This selection rule specifies a set of calendar months of the calendar year.</p>
+<p id="_603cb971-ac9d-4f5d-a02d-195f88a05841">Representation:</p>
+<p id="_9b2d0f79-8b95-43eb-b5b0-f2a1c336f9f5" class="Sourcecode">monthSR&#xA0;=&#xA0;[monthE]</p>
+<p id="_fefbeca5-455f-4f04-9711-d22ab1f4d4c3">Valid values are [1] to [12], corresponding to the ordinal number of the calendar month.</p>
+<table id="_a9e19422-4142-4a4b-a6c5-5e85402911f8" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_acae5a6e-e423-4940-bb44-ff18113cece7" class="example"><tt>3M</tt> represents the third calendar month of the calendar year, i.e. March.</p>
+</td></tr></table></div>
+        <div id="selection-weeks"><h2>5.3. Selection of calendar weeks</h2><p id="_43f14be7-0144-43d9-aaf1-e6d536e41c0c">This selection rule specifies a set of ordinals specifying calendar weeks of the calendar year.</p>
+<p id="_4bf6365b-2b28-4b39-92e4-652e4ad00fa4">Representation:</p>
+<p id="_b2d7bd84-3916-4dd2-aede-b407f315598c" class="Sourcecode">weekSR&#xA0;=&#xA0;[weekE]</p>
+<p id="_341cc444-15cc-4d3c-8659-6e829dbd4880">Valid values are [1] to [53] and [-53] to [-1]. This corresponds to the
+number of calendar weeks of a year according to week numbering as
+defined in <a href="#ISO8601-1">ISO 8601-1:--</a>.</p>
+<p id="_ef58a69f-131c-47e2-a0fe-bbc642efe1d5">This rule should only be specified when the frequency of the repeat
+rule is set to yearly (<a href="#eligible-time-intervals-year">Clause 6.3.2, a)</a>).</p>
+<table id="_592b4350-e579-45b1-87dc-c25e0b13f781" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_1d3e80ee-cae8-4f9c-96bf-7f51b7ecb5b7" class="example">The third week of the calendar year is represented by the expression
+<tt>3W</tt> in this part.</p>
+</td></tr></table>
+<div id="_2dbc120c-c25c-4067-8364-ec2a71b6476c" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; Week 53 can only occur when Thursday is January 1 or if it is a
+leap calendar year and Wednesday is January 1, in accordance with
+<a href="#ISO8601-1">ISO 8601-1:--, Clause 4.2.2</a>.</p></div>
+<div id="_09309bcb-ee7f-4964-8baa-480d03d0d5ad" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; Refer to <a href="#CC18011">CC 18011:--, Clause 6.7</a> for negative values of weeks.</p></div>
+<div id="_466e38c2-f4b5-441d-b81c-6476d7b34fbc" class="Note"><p><span class="note_label">NOTE  3</span>&#xA0; Definitions of the calendar week and the week number are provided
+in <a href="#ISO8601-1">ISO 8601-1:--</a>.</p></div></div>
+        <div id="selection-month-days"><h2>5.4. Selection of calendar month days</h2><p id="_d1f0956d-9666-4228-9264-d3fde8f2b929">This selection rule specifies a set of days of the calendar month.</p>
+<p id="_625a2444-65ee-4dd3-95b4-b94f3422d69b">Representation:</p>
+<p id="_2cca5020-590e-449d-a2f4-76feed8e7598" class="Sourcecode">daySR&#xA0;=&#xA0;[dayE]</p>
+<p id="_61d9ad7f-318b-469a-8365-a1c2d440a4e3">Valid values are [1] to [31] and [-31] to [-1]. This corresponds to the
+maximum number of calendar days of a calendar month.</p>
+<table id="_fd083ff9-d812-49d0-ac54-9ce074880bfe" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_2d3ec0be-9d0a-4e55-829b-60c5026a9a64" class="example"><tt>-10D</tt> represents the tenth to the last calendar day of the calendar
+month.</p>
+</td></tr></table>
+<p id="_640b908b-157f-4761-bd5a-b05af4f76f52">When the frequency part is set to weekly
+(<a href="#eligible-time-intervals-week">Clause 6.3.2, c)</a>), this selection rule must not be
+specified.</p></div>
+        <div id="selection-week-days"><h2>5.5. Selection of week days</h2><p id="_e489970c-e757-4d67-ade5-92ade5d69225">This selection rule specifies a set of days of the week.</p>
+<p id="_b59d0f46-7638-4b67-bc5f-95ce484eb647">Representation:</p>
+<p id="_e87e0bec-8bdc-4036-988c-4a57583b0fff" class="Sourcecode">daykSR&#xA0;=&#xA0;[daykE]</p>
+<p id="_7943804d-6ab0-4ab2-ba57-309cc0452cd6">Valid values are [1] to [7].</p>
+<table id="_1e21e536-bcdd-4273-b157-19d789ebd1d1" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_2893d6c3-4fd0-40ea-84e3-b3aa674e60a6" class="example">Within a monthly rule, "1K" represents all Mondays within the calendar
+month.</p>
+</td></tr></table></div>
+        <div id="selection-weeks-position"><h2>5.6. Selection of calendar week days with position</h2><p id="_d80da630-e129-4d5d-a6b4-5236d93cf7a3">This selection rule indicates the n-th occurrence of a specific week
+day within a yearly (<a href="#eligible-time-intervals-year">Clause 6.3.2, a)</a>) or monthly
+(<a href="#eligible-time-intervals-month">Clause 6.3.2, b)</a>) intervals.</p>
+<p id="_2bde87f6-a6bc-470e-bbe8-7e34ada1c939">Representation:</p>
+<p id="_791626ab-6574-4597-9b9f-a7deda68bf28" class="Sourcecode">daykR&#xA0;=&#xA0;[!]["`-`"][i]["`J`"][daykE]</p>
+<p id="_4d6d9244-8e77-48cf-8ae1-4b1e816b3146">This representation should be used only with repeating rules with
+intervals of a higher order time scale unit than "week", such as
+"yearly" or "monthly". Valid values of [i] range from [1] to [53] and
+[-53] to [-1].</p>
+<p id="_d057e420-150f-477f-ad68-3101ffa29f53">The numeric value [i] in this rule corresponds to an offset within a
+given scope:</p>
+<ul id="_e4e0dc31-5761-4ef7-a667-aed5bb886440">
+  <li>
+    <p id="_44a39bc2-efb4-42e0-9737-0c52f814b93a">when the frequency is yearly, and when there is a rule for selection
+of calendar month, then the offset corresponds to an offset within the
+calendar month specified in the selection of month rule;</p>
+  </li>
+  <li>
+    <p id="_e6af5d4e-1c7f-4f28-b5a1-0949cdf0369b">when there is a rule for selection of week or for selection of
+calendar month, then the offset corresponds to an offset within the
+calendar year.</p>
+  </li>
+</ul>
+<table id="_abe5d23c-deab-4804-84d1-6b832a2de0b5" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_d549cab1-0cb3-4ac7-b9f7-e6ca78aaf191" class="example">When specified in a monthly context, <tt>+1j1K</tt> represents the first
+Monday within the calendar month, whereas <tt>{1,-2}j1K</tt> represents the
+first and the second last Monday of the calendar month.</p>
+</td></tr></table>
+<table id="_bb4610c1-41e1-4a84-a129-018efc20eee1" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_ed860187-c386-48da-807e-10398ed84513" class="example">When specified in a yearly context, <tt>+52j1K</tt> represents the 52th Monday
+within the calendar year, whereas <tt>-21j1K</tt> represents the 21st Monday
+counted from the last week of the calendar year.</p>
+</td></tr></table></div>
+        <div id="selection-ordinal-days"><h2>5.7. Selection of ordinal days in calendar year</h2><p id="_f6a3e1e0-6e73-49e3-b6a1-142a1a68c393">This selection rule specifies a set of ordinal days of the calendar
+year, and should only be specified when the interval of the repeat rule
+is set to yearly (<a href="#eligible-time-intervals-year">Clause 6.3.2, a)</a>), monthly
+(<a href="#eligible-time-intervals-month">Clause 6.3.2, b)</a>) or daily
+(<a href="#eligible-time-intervals-day">Clause 6.3.2, d)</a>).</p>
+<p id="_fc738992-1ea6-40e3-8239-0af233b5ad4a">Representation:</p>
+<p id="_f674bd7b-59be-4281-8735-f6185efc3b10" class="Sourcecode">dayoSR&#xA0;=&#xA0;[dayoE(m)]</p>
+<p id="_7d3d9cc7-71e1-4f2a-b147-60bb97af0956">Valid values are [1] to [366] and [&#x2013;366] to [-1].<div id="_e2bb9021-f849-4693-b08c-8c4dc858e55d" class="Note"><p><span class="note_label">NOTE</span>&#xA0; The values of [366] and [-366] are used to match a calendar leap year</p></div></p>
+
+<table id="_929d25b2-fd67-4b7a-b922-05c0bdf500f0" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_1c1e6768-689d-4639-8df4-52f8ed377bc3" class="example"><tt>-1</tt> represents the last day of the calendar year (December 31st)</p>
+</td></tr></table>
+<table id="_83e8e872-4ff7-4e1a-8c9f-6ff604214c27" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_839095e1-258b-4bee-8aa6-415660c19921" class="example"><tt>-306</tt> represents the 306th to the last day of the calendar year (March 1st)</p>
+</td></tr></table></div>
+        <div id="selection-hours"><h2>5.8. Selection of hours</h2><p id="_d4f4384d-18ca-4ff2-be02-619878a7fdb0">This selection rule specifies a set of hours of the calendar day.</p>
+<p id="_ae7dbbdb-9d5d-4640-8cd3-0894e170f0c1">Representation:</p>
+<p id="_310b71ee-aee0-4f6c-9305-1a64de647d59" class="Sourcecode">hourSR&#xA0;=&#xA0;[hourE]</p>
+<p id="_b7dd8e08-5220-4075-b0b4-24eedeebe9d7">Valid values are [0] to [23].</p></div>
+        <div id="selection-minutes"><h2>5.9. Selection of minutes</h2><p id="_2a651b2c-1a17-4d8e-9166-0fff296c5c9a">This selection rule specifies a set of minutes within an hour.</p>
+<p id="_5306093b-a237-4dce-b0b8-999a1d7da01b">Representation:</p>
+<p id="_70d2ca1c-8660-4301-a896-7a67234c0325" class="Sourcecode">minSR&#xA0;=&#xA0;[minE]</p>
+<p id="_efa4a641-8b01-47d6-ab06-cf7c45a9abda">Valid values are [0] to [59].</p></div>
+        <div id="selection-seconds"><h2>5.10. Selection of seconds</h2><p id="_f06624fd-2c81-4beb-bea6-ead802f046f2">This selection rule specifies a set of seconds within a minute.</p>
+<p id="_97aaedb8-d44a-4f44-8a8a-fb897acc53a4">Representation:</p>
+<p id="_43e7fd49-829f-43b8-a606-68736423ddcd" class="Sourcecode">secSR&#xA0;=&#xA0;[secE]</p>
+<p id="_74cde9f5-3331-4e4d-a60f-79ea0447c169">Valid values are [0] to [60].</p>
+<div id="_941df4a6-6f0f-4aca-9429-0ca52e0270a6" class="Note"><p><span class="note_label">NOTE  1</span>&#xA0; The value of [60] is used to match a leap second of the calendar year.</p></div>
+<div id="_12483c30-e26c-4b95-b4bf-468201dfc86f" class="Note"><p><span class="note_label">NOTE  2</span>&#xA0; The value of [60] should be changed to [59] when converting such
+rule that to the <a href="#RFC5545">RFC 5545:2018</a> <tt>BYSECOND</tt> since the <tt>BYSECOND</tt> syntax
+does not support a value of [60].</p></div></div>
+        <div id="selection-position"><h2>5.11. Selection of position</h2><p id="_b80c9292-20a0-4ddb-9abe-be633788f52d">The positional part is an optional part in a selection rule.</p>
+<p id="_a192604e-347e-482a-b595-1e98aac64b69">It specifies a set of values that corresponds to the n-th occurrence
+within selected occurrences.
+Particularly, it operates on a set of recurrence instances in one
+interval of the repeating rule.</p>
+<p id="_451e8c73-2672-4df4-86fd-22de46f31e0f">A set of recurrence instances starts at the beginning of the interval
+defined by the frequency part.</p>
+<p id="_2ec39dae-f6b4-493f-80a2-4314e0e5606f">The selection of position should only be used when there is at least
+one selection rule is specified.</p>
+<p id="_e1004bd1-d12c-424c-8d72-c8a4ad8edafb">Representation:</p>
+<p id="_59b154f4-ffe8-4d93-bfab-2565728608b8" class="Sourcecode">positionSR&#xA0;=&#xA0;[position]["`I`"]</p>
+<p id="_55d2a4b4-2265-4f30-8f12-e975a6d0068e">Where,</p>
+<p id="_8cf6b0b0-5818-4839-a46b-135055ab949b" class="Sourcecode">position&#xA0;=&#xA0;[!]["`-`"][i]</p>
+<p id="_19ae4175-a664-4a9e-a6cb-635b4ffda4c8">Each [position] value can include a positive (+n) or negative (-n)
+integer. Valid values for [position] are therefore unbounded,
+except for the integer value [0], which is not accepted.</p>
+<p id="_c411ea1b-db0f-4b7a-bf73-01ea74686ba6">Position numbers within a set of occurrences is considered to
+start with [1] (the first occurence of the set of occurrences),
+and [-1] represents the first occurence when counted backwards.</p>
+<table id="_66197bf0-6da1-4d3e-8401-11634d1c17fe" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_5b162a73-d451-4315-9c88-ca8e0c072cd8" class="example">In a repeating rule with a weekly frequency, the interval would be one
+week.</p>
+</td></tr></table>
+<table id="_a183a26e-3c9d-4b0e-9508-f8c0ba907c0e" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_0ea5c225-30ea-42ca-a8d2-5791924b041e" class="example">"The last work day of calendar months" can be represented by the
+repeating rule <tt>F1ML{1,2,3,4,5}K-1I</tt> (using notation specified in
+<a href="#integer-ops">Clause 4</a>)</p>
+</td></tr></table></div>
+      </div>
+      <div id="recurrence">
+        <h1>6.&#xA0; Recurring time intervals with repeat rules</h1>
+        <div id="_general_2"><h2>6.1. General</h2><p id="_8387ab57-b38a-45bd-b8c7-ca10899baa06">This clause extends <a href="#ISO8601-1">ISO 8601-1:--, Clause 5.4</a> "Recurring Time Interval",
+by adding a rule part that defines the repeat pattern. The rule part is
+appended to the recurring time interval structure.</p>
+<p id="_9bf67316-31f1-40df-9c06-68d3c643efd2">The repeat rule syntax described in this clause is interchangeable with the syntax specified in IETF <a href="#RFC5545">RFC 5545:2018</a>, and
+is dependent on the the requirements of <a href="#selection">Clause 5</a>.</p></div>
+        <div id="_method_of_specification"><h2>6.2. Method of specification</h2><p id="_fd3b0e5e-f6a3-434e-97a0-94ef33dd2ccc">A recurring time interval is represented as follows:</p>
+<ul id="_69b1b03b-9e4c-40ec-9f57-a074d0d5923f">
+  <li>
+    <p id="_74f3829f-d702-4852-b89f-a013d2fce505">Optionally, a number of occurrences. If absent, the number of
+occurrences is unbounded. Each occurrence is called an "event".</p>
+  </li>
+  <li>
+    <p id="_5b82c27f-4b1e-4899-8f95-c8e1b0faa540">Followed by a time interval, as specified in <a href="#CC18011">CC 18011:--, Clause 6.6</a>.</p>
+  </li>
+  <li>
+    <p id="_be09cf99-6554-46eb-91e2-5934138d7e66">Followed by a repeat rule.</p>
+  </li>
+</ul></div>
+        <div id="recurrence-repeat-rule"><h2>6.3. Repeat rule</h2><div id="_general_3"><h3>6.3.1. General</h3><p id="_587d5da0-af57-48b0-81a9-ec94f911655b">A repeat rule identifies a set of matching instants according to
+specification of a repeating cycle used together with selection rules.</p>
+<p id="_20570080-008b-4a33-bcd1-0a2dc91aed9f" class="Sourcecode">repeat-rule&#xA0;=&#xA0;["`F`"][eligible-time-intervals]["`L`"][selection-rules]</p>
+<p id="_f2aff822-0ba7-4c18-b56b-36f506374bc9">The frequency designator ["F"] precedes the identification of a series
+of repeating time intervals ("repeating intervals"). Within each
+repeating interval, one sub-interval is distinguished, called an
+"eligible time interval".</p></div>
+<div id="eti"><h3>6.3.2. Eligible time intervals</h3><p id="_7a06d3b4-80c6-4c23-9631-eae363f414eb">Within each eligible time interval, one or more events occur, as
+determined by [selection-rules], which are optional.</p>
+<p id="_5d136e37-1009-4cf3-b049-16d9778f7823">If [selection-rules] is omitted, a single event occurs at the end
+of the eligible time interval.</p>
+<p id="_d8062442-b12c-4fc9-b911-a5f6cf201d3c"><tt>[eligible-time-intervals]</tt> in the repeat rule above is one of the following:</p>
+<ol type="a" id="_9e90c818-1902-41c0-84c9-271e80f0b8e0">
+  <li id="eligible-time-intervals-year">
+    <p id="_9ebae569-8e0e-41dc-8739-926d0eec86fa">Time interval of one or more years:	<tt>[yearE]</tt></p>
+  </li>
+  <li id="eligible-time-intervals-month">
+    <p id="_480cff49-63bf-4684-9ad8-5ee2dc15a85f">Time interval of one or more months:	<tt>[monthE]</tt></p>
+  </li>
+  <li id="eligible-time-intervals-week">
+    <p id="_2efa62b9-1d62-4a3a-beca-a23a36d1b170">Time interval of one or more weeks: 	<tt>[weekE]</tt></p>
+  </li>
+  <li id="eligible-time-intervals-day">
+    <p id="_b26732a7-de4f-4e3c-a06a-2dc0c5abf095">Time interval of one or more days: 	<tt>[dayE]</tt></p>
+  </li>
+  <li>
+    <p id="_3f217041-c81b-4660-958a-7fb7b03c0fb0">Time interval of one or more hours: 	<tt>[hourE]</tt></p>
+  </li>
+  <li>
+    <p id="_ba66f84d-fa66-4200-a42f-1121c0c35efc">Time interval of one or more minutes:	<tt>[minE]</tt></p>
+  </li>
+  <li>
+    <p id="_26b22e35-64be-4504-a7a7-6d59bd15ef20">Time interval of one or seconds:		<tt>[secE]</tt></p>
+    <ul id="_487f8837-9b65-49d4-8596-83967e7cb429">
+  <li>
+    <p id="_8da4aaed-d4f4-4366-be81-ad2ae3d23fa2">The duration of each repeating interval is the value of
+[eligible-time-intervals].</p>
+  </li>
+</ul>
+  </li>
+</ol>
+<table id="_c38dc8df-771a-46ff-bbd0-a1d2ce48cc94" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_90c05666-9aec-456c-b7c4-2acc8147efd5" class="example">If the value of [eligible-time-intervals] is <tt>8Y</tt>, the length of each
+repeating time interval is 8 years.</p>
+</td></tr></table>
+<ul id="_84418787-12d3-4161-9c33-8b0d385f4ca3">
+  <li>
+    <p id="_6b927a2b-723e-49fb-8384-316e6a5281f7">The duration of each eligible time interval is one-unit of the chosen
+time scale component in which the duration of [eligible-time-intervals]
+is expressed.</p>
+  </li>
+</ul>
+<table id="_935d4905-13b7-4af8-9843-7cded4e05d1b" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_ce892412-9882-4f4c-8428-bfc81403bd1b" class="example">If the value of [eligible-time-intervals] is <tt>8Y</tt>, then the time scale
+component is year, there are eight eligible intervals, each of length 1
+year.</p>
+</td></tr></table>
+<ul id="_c6629016-52f7-4fd5-9274-da089319803c">
+  <li>
+    <p id="_4ebc8e49-569c-4f1a-9875-6addfb14c1fb">Each eligible time interval begins x-1 units of the selected time
+scale component following the beginning of its repeating interval,
+where x is the coefficient of the unit.</p>
+  </li>
+</ul>
+<table id="_3b4a4cce-70b5-47a8-8b26-63a6be6268f4" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_5e805ae7-ae09-4547-b7fb-5dca569b576d" class="example">If the value of [eligible-time-intervals] is <tt>8Y</tt>, the eligible time
+interval is the 7th year within the 8-year repeating interval.</p>
+</td></tr></table>
+<table id="_10901109-2f7b-4d88-8b92-e147998666bc" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  4</td><td valign="top" class="example">
+  <p id="_4aa88c31-abcc-486f-afc9-d6d35e0592db" class="example">The expression <tt>F2Y</tt> in the frequency part means that the eligible
+periods are the second year of each 2-year repeating interval.</p>
+</td></tr></table>
+<table id="_14cce9ad-de24-477a-8338-0c993400e9c0" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  5</td><td valign="top" class="example">
+  <p id="_4d68ee86-8804-431f-a1eb-9e4267009036" class="example">The expression <tt>F8D</tt> in the frequency part means that the eligible
+periods are the 8th day of each 8-day interval.</p>
+</td></tr></table></div>
+<div id="_selection_part"><h3>6.3.3. Selection part</h3><p id="_e21ea1ae-e746-4b9c-9fd3-0a9a72371999">The selection designator ["L"] identifies a list of selection rules,
+which specify conditions of matching one or more instants within one or
+more time intervals.</p>
+<p id="_4a4ff739-7918-435f-84b4-a9c0a028b87c" class="Sourcecode">selection-rules&#xA0;=&#xA0;["`L`"][selection-rule-1]...[selection-rule-n]</p>
+<p id="_1a9e4cac-6215-4b3f-a756-c37b7b6da09b">Representations for selection rules are specified in <a href="#selection">Clause 5</a>.</p>
+<p id="_cf6421cc-7b25-413b-b6d9-357e24399872">In a repeating rule, if the selection part is present but does not
+specify selection rules for all time scale components provided in the
+"time interval start", all lower order values from "time intervalstart" value should be used to fill in the missing component values in
+the selection part.</p>
+<table id="_6bf8e57f-47eb-478e-a9b9-e3f8c8c5c214" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_90bd92bb-e8e1-4c9b-874e-fb59c061818a" class="example">When the selection part <tt>L3DT</tt> is used with the time interval start
+value <tt>2018-08-01T01:02:03</tt>, the selection part is treated as <tt>L3D</tt>
+<tt>F1DL1M</tt> reduces the number of repeat instances from all days (when the
+selection rule was not specified) to all days in January.</p>
+</td></tr></table>
+<p id="_6fdb8a04-65fc-41a5-88c8-082c09a36677">For a detailed explanation of interactions between eligible time
+intervals and the selection part, please refer to <a href="#annexa">Appendix A</a>.</p>
+<p id="_9a8893b9-ccbe-4a4c-9b66-24a60d4743cd">For issues dealing with compatibility with <a href="#RFC5545">RFC 5545:2018</a>, please refer to
+<a href="#annexb">Appendix B</a>.</p></div></div>
+        <div id="_complete_representations"><h2>6.4. Complete representations</h2><div id="_general_4"><h3>6.4.1. General</h3><p id="_ce556563-77da-4110-8b6b-138de16b75b7">A complete representation of a recurring time interval with repeat
+rules, shall be in accordance with <a href="#selection">Clause 5</a> and <a href="#recurrence-repeat-rule">Clause 6.3</a>,
+combining any complete
+recurring time interval representation as defined in <a href="#ISO8601-1">ISO 8601-1:--, Clause 5.4.3</a> with
+the repeat rule.</p>
+<p id="_d97fab48-fc2e-4afc-b8b5-a136ec575adb">A recurring time interval is expressed according to the following
+representation:</p>
+<p id="_be88f6ae-6f54-4540-a280-68381d59c1aa" class="Sourcecode">["`R`"][n]["`/`"][time-interval]["`/`"][repeat-rule]</p>
+<p id="_41465e93-ef85-426d-83a7-3bdf5ddbddc8">Where,</p>
+<ul id="_0d208c4a-64cc-49db-880a-3f9d84175a82">
+  <li>
+    <p id="_7ae8f250-e366-48a8-bb5a-191e266e3835">["R"] is the recurring time interval designator;</p>
+  </li>
+  <li>
+    <p id="_bfda9da5-4c82-4077-9000-7c74d9715c5b">[n] is the number of recurrences (optional);</p>
+  </li>
+  <li>
+    <p id="_f5768f36-403b-4520-af39-2e7b99cde566">[time-interval] is a valid time interval;</p>
+  </li>
+  <li>
+    <p id="_69a50075-ccee-4619-8587-9921b28fcf58">[repeat-rule] is a repeat rule defined in <a href="#recurrence-repeat-rule">Clause 6.3</a>.</p>
+  </li>
+</ul></div>
+<div id="_basic_formats"><h3>6.4.2. Basic formats</h3><p id="_995ae905-a4de-4490-8fe6-850824f6dc15">The basic format time interval is specified as [timeInterval] of one of
+these three representations described in <a href="#ISO8601-1">ISO 8601-1:--</a>:</p>
+<ul id="_455e670f-4ed2-4849-9184-49ba201a48e8">
+  <li>
+    <p id="_76e1edde-3790-4925-9eb6-17908c6ee1d5">[date]["T"][time]["/"][date]["T"][time]</p>
+  </li>
+  <li>
+    <p id="_bfd55955-7e2f-4349-8a36-c68c510fcd59">[date]["T"][time]["/"][duration]</p>
+  </li>
+  <li>
+    <p id="_9e5b48c7-ae09-4aec-84cf-b087f0ebe9f4">[duration]["/"][date]["T"][time]</p>
+  </li>
+</ul>
+<p id="_72c32caa-af44-43c5-a31b-4b09ea593ff8">The representation of a basic format recurring time interval is therefore:</p>
+<p id="_2d963ac2-a434-45ed-9005-619526eb6150" class="Sourcecode">["`R`"][n]["`/`"][timeInterval]["`/`"][repeat-rule]</p>
+<table id="_9fd34cde-49a4-4402-9b3d-619182804bdd" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_a4f31771-21df-49f3-a609-538895c9b638" class="example"><tt>R12/20150929T140000/20150929T153000/F2W</tt> is of the first form</p>
+</td></tr></table>
+<table id="_e8cbcb43-a94b-457c-9b23-1e3475845987" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_65858cff-b178-4d30-a2ec-1c5163f0888d" class="example"><tt>R12/20150929T140000/P1H30M0S/F2W</tt> is of the second form</p>
+</td></tr></table>
+<table id="_1d00dfac-e2e2-4369-8b36-60e5db0f6f3e" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_987c8ae4-41a4-4d01-b46b-91003b10b962" class="example"><tt>R12/P2H30M0S/20150929T153000/F2W</tt> is of the third form</p>
+</td></tr></table></div>
+<div id="_extended_formats"><h3>6.4.3. Extended formats</h3><p id="_a63cec02-8f8c-4b8c-884e-8089c3c1d900">The extended format time interval is specified as [timeIntervalX] of
+one of these three representations described in <a href="#ISO8601-1">ISO 8601-1:--</a>:</p>
+<ul id="_c42be34e-eaf3-448d-9229-669e32468c7a">
+  <li>
+    <p id="_dfbbfec9-a71a-48fb-8d90-19f33f78c61f">[dateI]["T"][timeI]["/"][dateI]["T"][timeI]</p>
+  </li>
+  <li>
+    <p id="_aba425dc-aa52-4e64-bc9c-84b2a7d35946">[dateI]["T"][timeI]["/"][duration-complete]</p>
+  </li>
+  <li>
+    <p id="_15c8a236-0816-43f3-a53c-26f4c2c9d491">[duration-complete]["/"][dateI]["T"][timeI]</p>
+  </li>
+</ul>
+<p id="_b6094c66-2614-4575-a5b7-038be65ea306">The representation of a basic format recurring time interval is therefore:</p>
+<p id="_c47dade6-76cd-4066-9032-b7caab736c67" class="Sourcecode">["`R`"][n]["`/`"][timeIntervalX]["`/`"][repeat-rule]</p>
+<table id="_3c5f7f8d-1223-4833-9288-e83493ff8a9d" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_517f5fce-7f2b-484f-b9dd-b54e5446df56" class="example"><tt>R12/2015&#x2011;09&#x2011;29T14:00:00/2015&#x2011;09&#x2011;29T15:30:00/F2W</tt> is of the first form</p>
+</td></tr></table>
+<table id="_9175ea13-2633-48bf-9719-cf09ab6b28b3" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_0031f76d-a43b-455f-8293-d194b17e59e1" class="example"><tt>R12/2015&#x2011;09&#x2011;29T14:00:00/P1H30M0S/F2W</tt> is of the second form</p>
+</td></tr></table>
+<table id="_9ba88fab-3a87-4002-9aaa-1856cc2a1f3a" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_3cd55afe-a895-4459-bbf5-7280a58cd252" class="example"><tt>R12/P1H30M0S/2015&#x2011;09&#x2011;29T15:30:00/F2W</tt> is of the third form</p>
+</td></tr></table></div>
+<div id="_explicit_formats"><h3>6.4.4. Explicit formats</h3><p id="_c478bf80-c432-44c7-a144-bcd026d37f35">The explicit format time interval is specified as [timeIntervalE]
+(see <a href="#CC18011">CC 18011:--</a>), the representation of a basic format recurring time
+interval is therefore:</p>
+<p id="_e51f933f-c125-4ee3-a845-86d337d7cb53" class="Sourcecode">["`R`"][n]["`/`"][timeIntervalE]["`/`"][repeat-rule]</p>
+<table id="_8a8f8bdf-a17b-49d9-8d53-169de8f8bfee" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_28362960-acb2-4088-9fd4-c6ab875e05ec" class="example"><tt>R12/2015Y9M29DT14H0M0S/2015Y9M29DT15H30M00S/F2W</tt> is of the first form</p>
+</td></tr></table>
+<table id="_394694b2-3247-40c5-a3aa-b5d0f28a8802" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_d01cb461-22c5-4e58-aa4a-e8d6068f6069" class="example"><tt>R12/2015Y9M29DT14H0M0S/P1H30M0S/F2W</tt> is of the second form</p>
+</td></tr></table>
+<table id="_788444e0-6c1a-4719-818a-ce55df521bac" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_7a382080-bbf5-45df-b7db-f02f0c2c433b" class="example"><tt>R12/P1H30M0S/2015Y9M29DT15H30M00S/F2W</tt> is of the third form</p>
+</td></tr></table></div></div>
+        <div id="_representations_other_than_complete"><h2>6.5. Representations other than complete</h2>
+
+  <p id="_ba3c38d8-86ac-4205-8f09-d2c35b713652">A representation other than complete of a recurring time interval with repeat rule shall be an expression in accordance with <a href="#selection">Clause 5</a> and <a href="#recurrence-repeat-rule">Clause 6.3</a>, where the time interval is represented in accordance with <a href="#ISO8601-1">ISO 8601-1:--, Clause 4.4.5</a>.</p>
+</div>
+        <div id="_time_scale_unit_precision"><h2>6.6. Time scale unit precision</h2><p id="_0c64b425-2fad-40c3-957e-0e692f1a8e1b">The resulting occurrences of a repeat rule after evaluation will use a time scale unit resolution equal to the lowest order time scale unit specified in the repeat rule.</p>
+<table id="_ed91f9b3-354f-4c35-ab1e-600eb3ced665" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_ad34d386-6e55-4d2c-b6d0-42c64274bc65" class="example">In the expression <tt>R/2018Y1M/P1M/F3M</tt>, the lowest order time scale unit specified is month, hence the resolution is month precision. This expression resolves to the set <tt>{ 2018-01/2018-02, 2018-04/2018-05 &#x2026;&#x200B; }</tt></p>
+</td></tr></table>
+<table id="_8d661384-7d0f-4e6d-9515-b003d7ec8e02" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_4fb9e286-cc9f-4188-bff6-818d55746c24" class="example">In the expression <tt>R/2018Y1M1D/P1D/F3M</tt>, the lowest order time scale unit specified is day, hence the resolution is day precision. This expression resolves to the set <tt>{ 2018-01-01/2018-01-02, 2018-04-01/2018-04-02 &#x2026;&#x200B; }</tt></p>
+</td></tr></table>
+<table id="_ab8f05ee-2adf-4857-a200-5eb1661daafb" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_bff29bee-0a97-45b4-bc7b-3dfe0c45301d" class="example">In the expression <tt>R/2018Y1M/PT10M/F1M</tt>, the lowest order time scale unit specified is minute, hence the resolution is minute precision. This expression resolves to the set <tt>{ 2018-01-01T00:00/2018-01-01T00:10, 2018-02-01T00:00/2018-02-01T00:10, &#x2026;&#x200B; }</tt></p>
+</td></tr></table></div>
+        <div id="_evaluation_of_a_repeat_rule"><h2>6.7. Evaluation of a repeat rule</h2><p id="_201c989f-e393-41f0-b211-5c739800bc51">A repeat rule specifies a set of occurrences where each occurrence is a time interval.</p>
+<p id="_8cc04cc0-eb70-448d-b140-ea5b8d3a5ca7">The resulting occurrences of a repeat rule are calculated by the
+following steps:</p>
+<ul id="_265e29eb-01b6-4635-a90c-865a5173c980">
+  <li>
+    <p id="_49009549-9ea3-4e68-bb2e-33178f10c207">enumerate all eligible time intervals;</p>
+  </li>
+  <li>
+    <p id="_6b35c9c3-7e66-4d08-8a56-d7396f7e8cf8">apply all selection rules to the eligible time intervals; and</p>
+  </li>
+  <li>
+    <p id="_fff87405-1f79-45b0-a6c0-b1250a26b837">obtain the overlapping instants specified by both the eligible time
+intervals and the selection rules.</p>
+  </li>
+</ul>
+<p id="_a6ffbd97-cc8a-4453-828e-2c2feebdc1b1">The resulting overlapping instants are the occurrences specified by
+evaluating the repeat rule.</p></div>
+      </div>
+      <br />
+      <div id="annexa" class="Section3">
+        <h1 class="Annex"><b>Appendix A</b> (informative) <b>Interactions between eligible time intervals with the selection part</b></h1>
+        <div id="_general_5"><h2>A.1. General</h2>
+
+  <p id="_fddc34a7-57f4-47f2-8fc0-191ad05190d4">The interaction between eligible time intervals and selection rules
+specified within a repeating rule give rise to interesting properties
+that users should be aware of.</p>
+</div>
+        <div id="_sample_evaluation_of_a_recurring_interval"><h2>A.2. Sample evaluation of a recurring interval</h2><p id="_21660467-1a5c-44b4-a303-7d64e9248c9c"><tt>R/20150104T083000/PT15M00S/F2YL1M1KT{8,9}H30M</tt> expresses a recurring
+interval (number of occurrences is unspecified) whose first occurrence
+is January 4, 2015, 8:30-8:45 AM, and subsequent occurrences, all of
+the same duration (15 minutes), are determined by the repeat cycle for
+which the following evaluation sequence is provided.</p>
+<ul id="_2890cd65-1070-45f4-a0be-17baf5136371">
+  <li>
+    <p id="_2ecc3728-5ec3-4f08-9b6f-937bb38f2112">the character <tt>F</tt> indicates that the formula for determining eligible
+time intervals follows;</p>
+  </li>
+  <li>
+    <p id="_6c8ef538-e032-4b87-825e-f391c2df34fe">the expression <tt>2Y</tt> indicates that the eligible time intervals have a
+repeating cycle of two years, and each eligible time interval is 1 year
+in length, the second year within its repeating interval;</p>
+  </li>
+  <li>
+    <p id="_3836d744-71b4-4248-b8f9-c54170102234">From this information together with the specification of the first
+occurrence, it is calculated that:</p>
+    <ul id="_2195b501-d8ea-4bfa-90fb-b55fd0a09055">
+  <li>
+    <p id="_1363d8d8-37b4-42cc-aaa7-8738f18eb9c5">the first eligible time interval is the calendar year 2015 (the year
+during which the first occurrence takes place)</p>
+  </li>
+  <li>
+    <p id="_6ebdd949-ad68-466d-a943-1ca280d241ad">the first repeating interval is the two-year period comprising
+calendar years 2014 and 2015;</p>
+  </li>
+</ul>
+  </li>
+  <li>
+    <p id="_eaf8f8a9-a552-4c60-827c-b9751e724901">the subsequent recurring intervals are then determined by the
+selection part;</p>
+    <ul id="_58b45744-30d4-4261-9c72-ac6a8a2ecd7f">
+  <li>
+    <p id="_bd71d26d-28cb-44d5-a104-8a67f85c4ffb">the character <tt>L</tt> indicates that selection parts follow;</p>
+  </li>
+  <li>
+    <p id="_1fa4979f-a0d7-4bb5-9c31-75e26251a190">the expression <tt>1M</tt> indicates that the matching occurrences are
+limited to January only;</p>
+  </li>
+  <li>
+    <p id="_2a3e10e7-4dc9-48b9-805a-6a97d5daed18">the expression <tt>1K</tt> indicates that the matching occurrences are
+limited to Sundays only;</p>
+  </li>
+  <li>
+    <p id="_a8399697-76ba-47a2-8992-65fb2646b2c8">the expression <tt>T</tt> indicates that intraday time scale components
+follow;</p>
+  </li>
+  <li>
+    <p id="_2a1c6786-e2d3-4b60-a5ec-1a983e81ea43">the expression <tt>{8,9}H</tt> indicates that the matching occurrences have
+clock hours 8 or 9;</p>
+  </li>
+  <li>
+    <p id="_272b0e63-8f7d-43a8-8394-70477f3b6793">the expression <tt>30M</tt> indicates that the matching occurrences have a
+clock minute value of 30, combined with specified clock hours, the
+starting times are determined to be 8:30AM and 9:30 AM;</p>
+  </li>
+  <li>
+    <p id="_a2dca1d5-34d5-40a8-ae6c-8abbda9bfbfd">since the selection rules lacks specified values for clock seconds,
+in accordance with 9.3.3, they should be obtained from the clock
+seconds value of the "time interval start" of <tt>20150104T083000</tt>, hence
+the clock seconds selection rule is specified as value <tt>00</tt>;</p>
+  </li>
+  <li>
+    <p id="_0ec04f2a-fa19-4e35-92a1-b6ea3e89b965">the recurrent occurrences therefore resolve to the rule "in the lastyear of every two years, for every Sunday in January at both 8:30:00 AMand 9:30:00 AM, create a 15 minutes event."</p>
+  </li>
+</ul>
+  </li>
+</ul>
+<div id="figure-basic-recurrences" class="figure">
+
+  <img src="_images/af381713-e381-4d9c-aa4c-39b85a845284.png" height="411" width="861" />
+<p class="FigureTitle" align="center">Figure A.1&#xA0;&#x2014; Resulting occurrences of the rule F3YL{2,4,6,8,10}M1D</p></div>
+<p id="_d43b8aa7-fa06-4039-9eec-d2839e81af18"><a href="#figure-basic-recurrences">Figure A.1</a> demonstrates that the repeating cycle
+denotes how often the eligible time intervals be evaluated. Within the
+eligible time intervals, the selection rules are applied. It is the
+overlap between the selection rules and eligible time intervals that
+produce the resulting occurrences.</p></div>
+        <div id="annexa-special-case"><h2>A.3. Special case when the repeating cycle uses value 1</h2>
+
+  <p id="_74bb6f85-e08d-4eba-8263-951b0149bbd7">When the repeating cycle is defined with a value 1 for any time unit
+(e.g. calendar year, calendar month, calendar day, calendar hour,
+etc.), the effect on the resulting occurrences are identical &#x2013; the
+repeating cycle fully covers all instants of the time scale. Therefore,
+the resulting occurrences are fully described by the selection rules
+that apply.</p>
+</div>
+        <div id="_orders_of_the_repeating_cycle_and_selection_rules"><h2>A.4. Orders of the repeating cycle and selection rules</h2><div id="_repeating_cycle_of_higher_order_than_selection_rules"><h3>A.4.1. Repeating cycle of higher order than selection rules</h3><p id="_40b6131b-78ce-46e7-adce-dccce60d6ff9">It is common in natural expressions and in calendar implementations
+that the repeating cycle uses a time scale unit of a higher order than
+that of the selection rules. The resulting occurrences are generally as
+expected by the creator of these rules.</p>
+<table id="_d5f5e12a-6882-4f03-b9a4-11b9c3e64354" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_5b72ec74-74c2-432a-9a40-fec3c9f516de" class="example"><a href="#figure-higher-order">Figure A.2</a> provides such a case; where the resulting
+occurrences happen once every three years, matching a single date of
+September 10th.</p>
+</td></tr></table>
+<div id="figure-higher-order" class="figure">
+
+  <img src="_images/97bfdd2d-5756-4429-911c-8bb0aa659cf5.png" height="411" width="964" />
+<p class="FigureTitle" align="center">Figure A.2&#xA0;&#x2014; When the repeating cycle is of a higher order than the selection part</p></div></div>
+<div id="annexa-same-order"><h3>A.4.2. Repeating cycle of same order with selection rules</h3><p id="_4cb33c5c-5815-47fe-b780-b88a007f9df5">When a time scale unit of the same order is used for both the repeating
+cycle and the selection rules, the following properties arise:</p>
+<ul id="_28829604-f320-4fc5-83a2-7fe2b8cb2eef">
+  <li>
+    <p id="_4c8c58d2-8c28-46eb-8a3a-cb50e9ab4edc">The effect of <a href="#annexa-special-case">Appendix A.3</a> applies;</p>
+  </li>
+</ul>
+<table id="_1652f115-1a0e-4a1f-bbc1-9166e606336e" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_b62f3738-191f-43c2-aad5-f58df3cfd664" class="example">A repeating rule of 1 month repeating cycle, with selection rules that
+are of the highest order of "month", has the same effect as the
+repeating cycle of 1 calendar year because every calendar month in the
+calendar year will be evaluated</p>
+</td></tr></table>
+<ul id="_3e34e778-a942-4f50-96f3-53a9babebfcf">
+  <li>
+    <p id="_ade22e2e-a2b1-44a5-9ecd-c86f8503a52a">A repeating rule with an n time unit repeating cycle, matched with
+selection rules of the same time unit, will provide occurrences that
+depend on the start instant of the repeating cycle.</p>
+  </li>
+</ul>
+<table id="_e5d3c375-aabc-4619-b27b-1831f41c4976" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_e7eec816-a7b9-4d65-b921-8d4046f063dc" class="example">A repeating cycle starting in April every 6 months will only match a
+monthly selection rule that contains April or October</p>
+</td></tr></table>
+<table id="_1ff544e2-c1f0-4d09-babc-313ee05528c4" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_88c88389-bb88-4775-a02d-ac3254a851e2" class="example"><a href="#figure-same-order">Figure A.3</a> demonstrates an instance of the second case where
+the repeating cycle does not overlap with eligible time intervals,
+resulting in no occurrences.</p>
+</td></tr></table>
+<div id="figure-same-order" class="figure">
+
+  <img src="_images/65ad6eb2-a6a7-468d-bd29-c58c2528f575.png" height="411" width="861" />
+<p class="FigureTitle" align="center">Figure A.3&#xA0;&#x2014; When the repeating cycle is of the same order as the selection part and mismatches</p></div></div>
+<div id="_repeating_cycle_of_lower_order_than_selection_rules"><h3>A.4.3. Repeating cycle of lower order than selection rules</h3><p id="_c4b5a14a-cec5-4ca8-8a9d-b4435e73fabd">When a time scale unit of a lower order is used for the repeating cycle
+than that of the selection rules, the following should be of note:</p>
+<ul id="_22edca90-2b78-4325-b6a1-cd4b0e769bfc">
+  <li>
+    <p id="_b5a35e0d-f2f3-4b6f-8404-05358d814bb4">The effect of <a href="#annexa-special-case">Appendix A.3</a> applies;</p>
+  </li>
+  <li>
+    <p id="_aefdbc26-2916-4fe6-ba01-08f1439f4746">A repeating rule with an n time unit repeating cycle, matched with
+selection rules of a lower order time unit, will provide occurrences
+that depend on the start instant of the repeating cycle.</p>
+  </li>
+</ul>
+<table id="_d01829ab-b78d-4a25-a6bd-c22b871b9e4d" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_6c5b985b-1294-4307-8852-1c53e1f52816" class="example"><a href="#figure-lower-order">Figure A.4</a> demonstrates this interaction of the second
+case, where the repeating cycle is of day order and a selection rule of
+calendar month order. Notice that there are no matches outside calendar
+month 3 due to the application of the selection rule.</p>
+</td></tr></table>
+<div id="figure-lower-order" class="figure">
+
+  <img src="_images/a1490375-1d1a-4231-811a-8ff6e3a34bba.png" height="411" width="964" />
+<p class="FigureTitle" align="center">Figure A.4&#xA0;&#x2014; When the repeating cycle is of a lower order than the selection part</p></div></div></div>
+      </div>
+      <br />
+      <div id="annexb" class="Section3">
+        <h1 class="Annex"><b>Appendix B</b> (informative) <b>Compatibility considerations of repeat rules with RFC 5545 recurrences</b></h1>
+        <div id="_evaluation_of_repeat_rules"><h2>B.1. Evaluation of repeat rules</h2>
+
+  <p id="_6237e2ce-6346-4b2b-95c3-39644a84d2d4">In this document, the evaluation of repeat rules
+(see <a href="#recurrence-repeat-rule">Clause 6.3</a>) rely on
+explicit specification of selection rules (see <a href="#selection">Clause 5</a>) and the direct
+inheritance of time scale component information from the initial start
+date.</p>
+</div>
+        <div id="_inheritance_of_time_scale_component_information"><h2>B.2. Inheritance of time scale component information</h2><p id="_1ca496ac-7f62-4a81-95e4-c3047599a63b">In the evaluation of repeat rules within this document as well as in
+<a href="#RFC5545">RFC 5545:2018</a>, a number of time scale components can be directly
+inherited from the initial start date.</p>
+<p id="_e5c0f9e2-c41e-41a6-a353-9438b3189136">In terms of <a href="#RFC5545">RFC 5545:2018</a> specifically:</p>
+<ul id="_8e33fa13-b15f-475c-9593-cab0bfdc9a01">
+  <li>
+    <p id="_38f54ee4-ce77-48c6-99fa-8332dbc503a2">when the <tt>FREQ</tt> parameter is set to <tt>SECONDLY</tt>, but without a
+<tt>BYSECOND</tt> parameter, the <tt>BYSECOND</tt> selection is directly inherited
+from the clock seconds value from the initial start date;</p>
+  </li>
+  <li>
+    <p id="_2dd7fea6-db35-4b03-a61f-d96066876847">when the <tt>FREQ</tt> parameter is set to <tt>MINUTELY</tt>, but without a
+<tt>BYMINUTE</tt> parameter, the <tt>BYMINUTE</tt> selection is directly inherited
+from the clock minutes value from the initial start date;</p>
+  </li>
+  <li>
+    <p id="_4d87710e-0f11-433a-b82c-f3eaccd28178">when the <tt>FREQ</tt> parameter is set to <tt>HOURLY</tt>, but without a
+<tt>BYHOUR</tt> parameter, the <tt>BYHOUR</tt> selection is directly inherited from
+the clock hours value from the initial start date.</p>
+  </li>
+</ul></div>
+        <div id="annexb-implicit-selection"><h2>B.3. Implicit selection rules of RFC 5545</h2><p id="_688ec27e-83e3-4fba-b1ee-a60d302ce087">In <a href="#RFC5545">RFC 5545:2018</a>, however, the evaluation of certain repeat rules also
+relies on implicit selection rules inherited indirectly from the
+initial start date.</p>
+<p id="_42e4c555-142b-4310-bba8-26473a2e70d9">Specifically,</p>
+<ul id="_9b5da3a8-e3e4-44fc-a139-b828074e3be0">
+  <li>
+    <p id="_d12df9d8-5991-48c4-bdf6-65128f43e46f">when the <tt>FREQ</tt> parameter is set to <tt>WEEKLY</tt>, but without a <tt>BYDAY</tt>
+parameter, the <tt>BYDAY</tt> selection is inherited from the calendar day of
+week value from the initial start date (note that the calendar day of
+week value is not directly specified in the initial start date, but it
+has to be inferred);</p>
+  </li>
+  <li>
+    <p id="_f1648bef-3d10-4505-9a42-81f3e81e9821">when the <tt>FREQ</tt> parameter is set to <tt>MONTHLY, but without both`BYMONTHDAY</tt> and <tt>BYDAY</tt> parameters, the <tt>BYMONTHDAY</tt> selection is
+inherited from the calendar month of year value from the initial start
+date;</p>
+  </li>
+  <li>
+    <p id="_5f807630-a0e1-4ffe-9fc9-4aa00625281d">when the <tt>FREQ</tt> parameter is set to <tt>YEARLY</tt> but without a
+<tt>BYYEARDAY</tt> parameter,</p>
+    <ul id="_58d13d46-6f32-4aac-8473-9beb36e91dc0">
+  <li>
+    <p id="_806d667d-7026-4422-9e3d-6a294d55da77">if no <tt>BYMONTH</tt> or <tt>BYWEEKNO</tt> parameter is set:</p>
+    <ul id="_78fb8491-5dd7-428e-b96d-9b8f69d63afd">
+  <li>
+    <p id="_ffcec484-f400-4ef9-b958-f3b6f9f1a877">if the <tt>BYMONTHDAY</tt> parameter is provided, then the <tt>BYMONTH</tt>
+selection is inherited from the calendar month of year value from the
+initial start date;</p>
+  </li>
+  <li>
+    <p id="_516a1781-6fec-460d-942b-7da5911cbffd">if the <tt>BYDAY</tt> parameter is not set, then the <tt>BYMONTH</tt> selection
+is inherited from the calendar month of year value from the initial
+start date;</p>
+  </li>
+</ul>
+  </li>
+  <li>
+    <p id="_6c5273a8-cb6c-4784-bea9-0350e164fd8f">if no <tt>BYMONTHDAY</tt>, <tt>BYWEEKNO</tt> or <tt>BYDAY</tt> parameter is set, the
+<tt>BYMONTHDAY</tt> selection is inherited from calendar day of month of the
+initial start date;</p>
+  </li>
+  <li>
+    <p id="_65b42bbc-72d1-478e-9862-5ea51561022e">if there is a <tt>BYWEEKNO</tt> parameter set but no <tt>BYMONTHDAY</tt> or
+<tt>BYDAY</tt>, the <tt>BYDAY</tt> selection is inherited from the calendar day of
+week of the initial start date.</p>
+  </li>
+</ul>
+  </li>
+</ul>
+<table id="_799e9a55-829b-45f1-9fb1-580edfeb1178" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_4110a261-0d39-45ba-bb0c-5ea5178e3b3b" class="example">In evaluating a simplified example expression from <a href="#RFC5545">RFC 5545:2018</a>, with
+<tt>DTSTART</tt> set to <tt>19970902T090000</tt> and <tt>RRULE</tt> set to
+<tt>FREQ=WEEKLY;INTERVAL=2</tt>, will result in the instance series of "1997September 2, 16, 30; October 14&#x2026;&#x200B;". This resulting instance series
+relies on an implicit understanding that <tt>FREQ=WEEKLY</tt> always requires
+selection of the <tt>BYDAY</tt> parameter, which is not specified in the
+original selection rule. In this case, <tt>BYDAY</tt> is implicitly set to
+Tuesdays as originally obtained from the <tt>DTSTART</tt> value being a
+Tuesday.</p>
+</td></tr></table></div>
+        <div id="_achieving_equivalent_selection_criteria_in_rfc_5545_syntax"><h2>B.4. Achieving equivalent selection criteria in RFC 5545 syntax</h2><p id="_81a52587-5dc8-4dc6-bdab-8426ec8ef709">Using mechanisms described in this document, implicit selection rules
+are not allowed. In order to convert a <a href="#RFC5545">RFC 5545:2018</a> recurrence rule into
+a repeat rule specified by <a href="#recurrence-repeat-rule">Clause 6.3</a>, the implicit
+selection rules based on indirect inheritance must be made into
+explicit selection rules.</p>
+<table id="_f173f5c7-5011-463f-b852-2e7cea5be9e6" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_17ba145a-e350-445f-8dbb-fbdb8ac299de" class="example">Following the example in <a href="#annexb-implicit-selection">Appendix B.3</a>, the value of
+Tuesday is considered to be indirectly inferred from the initial start
+date since it is not explicitly specified. To achieve the same effect
+using mechanisms of this document, the <tt>BYDAY</tt> selection rule in
+<a href="#RFC5545">RFC 5545:2018</a> must be explicitly set as a selection rule, such as in
+<tt>L1K</tt>.</p>
+</td></tr></table></div>
+      </div>
+      <br />
+      <div id="annexc" class="Section3">
+        <h1 class="Annex"><b>Appendix C</b> (informative) <b>Ambiguities inherent in exact duration calculations</b></h1>
+        <div id="_general_6"><h2>C.1. General</h2><p id="_889e60d0-f00d-4031-a6af-cfeb5c90a660">The exact duration between two instants on a time scale depends on the
+time scale used and is dependent on where these marks occur.</p>
+<p id="_808e10aa-0628-4e09-a758-46d2863a8c32">In a Gregorian calendar, for example, a calendar month can have a
+duration of 28, 29, 30, or 31 days depending on the month and whether
+the year is a leap year. Given UTC depends on the leap second mechanism
+for synchronicity with UT1, in a 24-hour clock, the last clock minute
+of the year may have a duration of 59, 60, or 61 seconds.</p>
+<p id="_05318888-3b2c-42dd-8d83-026749e183f0">These examples demonstrate that time scales can be disjoint by nature.
+For example, a Gregorian calendar only contains the "instant" February
+29 on a leap year. A time shift change can also cause a rift in the
+time scale, such as on the application or revocation of daylight
+savings time, where the instants are relabeled in bulk.</p>
+<p id="_cb179309-a736-4453-af1d-5a33f8606370">The calculation of exact duration poses a problem for recurring
+instances.</p>
+<p id="_5ff00ab7-52e2-4baf-9442-97133e606fcb">For example,</p>
+<ul id="_53de455e-4c9a-4d05-92c2-e552670f35b5">
+  <li>
+    <p id="_b0043233-e074-4755-bd29-0399187edb3e">A repeating rule that repeats every year starts on February 29.
+Should the next instance be February 29 of the next leap year, or
+February 28 of the next year?</p>
+  </li>
+  <li>
+    <p id="_29250633-c538-4870-b7ac-6c37b98f014b">July 31 is to be incremented by one month. Should the result be
+August 30 (30 days from July 31) or September 1 (31 days from July 31)?</p>
+  </li>
+</ul>
+<p id="_5bdfbde5-4ed8-4696-992e-1ed3bbe3d2f1">This section explains the cause of ambiguity and provides guidelines
+as well as an algorithm for resolution.</p></div>
+        <div id="_cause_of_ambiguity"><h2>C.2. Cause of ambiguity</h2>
+
+  <p id="_cb7f68d7-daf1-4613-9832-3d3b05f97954">The overflow of time scale component values occurs, when the duration
+specifies a value increment of a higher order time scale component, but
+this higher order time scale component does not have the corresponding
+mark in its lower order time scale.</p>
+</div>
+        <div id="_guidelines_for_expressing_ambiguous_recurring_instances"><h2>C.3. Guidelines for expressing ambiguous recurring instances</h2><p id="_6a6a1a82-cbc2-4a63-8eaf-3b315f5b9a9c">Before an ambiguous recurrent expression is created, the creator
+of such recurring interval rule should be acutely aware of the
+options available for specifying the actual intent.</p>
+<p id="_8dbd3787-c5f4-4d69-a927-65f39ebf2cb7">For example, a monthly recurring rule starting on February 28,
+could represent the following intentions:</p>
+<ul id="_6a9ba031-984a-45a6-a736-5c88687dce61">
+  <li>
+    <p id="_73d4b649-18a4-4457-8efa-a4496e18245c">to point to the 28th calendar day of month of every month;</p>
+  </li>
+  <li>
+    <p id="_50326247-8b85-4302-92da-b3d71b1814be">to point to the last calendar day of every month (such as, when
+February 28th is the last day of the specified starting month); or</p>
+  </li>
+  <li>
+    <p id="_587f865e-d6e0-4afe-abd7-7685dac85fe9">to point to the second-last calendar day of every month (such as,
+when February 29th is the last day of the specified starting month).</p>
+  </li>
+</ul>
+<p id="_e9b389b7-9237-4254-874c-b088f89b595a">In case where the creator of such rule could react using an interact
+interface, the creator (or user) could specify his or her intention of
+such a rule and therefore produce a recurring interval rule that does
+not succumb to ambiguity described in this section.</p></div>
+        <div id="annexc-algorithm"><h2>C.4. Algorithm to resolve overflows</h2><div id="_general_7"><h3>C.4.1. General</h3>
+
+  <p id="_a988b547-2e40-4ed9-8411-e1b30d25bc0b">This section provides an algorithm that calculates a consistent date
+given an origin date (date) and a duration time scale component
+(duration) to apply. This algorithm is noted as <tt>resolve(date, duration)</tt>
+or "date + duration" in the text below.</p>
+</div>
+<div id="_prerequisites"><h3>C.4.2. Prerequisites</h3><p id="_f114d038-0128-40d0-87a2-3e423b7d91c0">An overflow is defined as number exceeding the maximum value accepted
+by the time scale component. For example, an increase of <tt>P1M</tt>
+(duration) to <tt>2018Y12M</tt> (date) will result in the expression
+<tt>2018Y13M</tt>, where the month component is overflowed with value <tt>13</tt>.</p>
+<p id="_22df7e5f-88d3-4524-a201-e478b23bbfed">An overflow is considered resolved once the overflowed time scale unit
+has transferred its excess to the immediate higher order time scale
+component. For example, the overflowed expression <tt>2018Y13M</tt> is
+resolved to <tt>2019Y1M</tt>.</p>
+<p id="_c8d90b36-b602-4926-9bba-5365a366f97f">An overflow can cause multiple carry-overs when the overflow not only
+causes the immediate higher order time scale component to overflow, but
+also subsequent higher order components. For example, the overflowed
+expression <tt>2018Y12M366D</tt> can be resolved to <tt>2018Y24M1D</tt> (which still
+contains an overflow), can be resolved to <tt>2019Y12M1D</tt> (where there is
+no more overflow).</p>
+<ul id="_a427de02-052d-4fff-842d-227edc60a3b0">
+  <li>
+    <p id="_cd7096a5-5378-43c2-9795-3b17b0402ef1">Split duration according to its time scale components, obtaining a
+set of split duration elements duration_i, where each element is of a
+different time scale unit called <tt>unit_i</tt> for order <tt>i</tt> (the highest order
+time scale unit is denoted as unit_max, the lowest order time scale
+unit is denoted as unit_min).</p>
+  </li>
+  <li>
+    <p id="_c3efabcd-0ebc-44fb-a1bf-9ba4e836360d">Starting from the value of the lowest order time scale unit unit_min
+to the highest order unit unit_max, consider each <tt>duration_i</tt> of <tt>unit_i</tt>:</p>
+    <ul id="_f8ad5947-0413-479f-b1aa-15c1f8239ccf">
+  <li><p id="_f2a71b46-62e6-46e2-8595-f337f66259d0">Increment date with <tt>duration_i</tt></p><table id="_005187b4-5969-4d1c-bf89-acc8033cc3ee" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_7b84cbca-19e3-49b2-9855-5520edd21186" class="example">Given a duration <tt>P2M</tt> to be incremented on a date <tt>2018Y1M</tt>, the resulting
+expression is <tt>2018Y3M</tt>.</p>
+</td></tr></table>
+<table id="_038f92c2-083f-465c-a596-688a4353006d" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_edebc1f5-44b4-481e-9957-d68635771e12" class="example">Given a duration <tt>P2M1DT3H</tt> to be incremented on a date, first increment
+the date with <tt>PT3H</tt>, then with <tt>P1D</tt>, at last with <tt>P2M</tt>.</p>
+</td></tr></table></li>
+  <li>
+    <p id="_0e199a85-05a6-4032-ad84-e364773fbe5c">If the time scale component at unit_i of date is overflowed due to
+the increase of duration_i (which is also of the same order), resolve
+by performing the following:</p>
+    <ul id="_7d9693d7-820d-4e7e-bee4-af550b441b2b">
+  <li>
+    <p id="_223347b1-3e9d-4bc6-8d92-7948335696e8">Carry the overflowed excess of the value at unit_i to the immediate
+higher order time scale component, and reset unit_i. Repeat this step
+with unit_{i+1} until there is no more overflow at time scale
+components from unit_i to unit_max.</p>
+  </li>
+  <li>
+    <p id="_5d8d2cff-9c04-41f2-a7f8-750d38876731">If a time scale unit in date of a lower order than <tt>unit_i</tt> has
+overflowed, truncate that overflow to the maximum valid value. Repeat
+this step with <tt>unit_{i-1}</tt> until there is no more overflow at time scale
+components from <tt>unit_i</tt> to <tt>unit_min</tt>.</p>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+<table id="_9292404f-d0b2-4cc9-a6b3-f310c2ef393f" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_77a12c7f-fc8a-4930-8f78-798d51935baa" class="example">To increment a duration of P1M on a date, first resolve overflows at
+the month unit via carry (which may carry over to the year unit, the
+immediate higher order unit), then resolve overflows at the day unit
+via truncate (which may cause reduction in days, the immediate lower
+order unit of the month unit).</p>
+</td></tr></table>
+<p id="_61ee2fd7-6af0-4da9-aac5-75eedaaf7753">The rule for resolving a lower order unit is demonstrated in detail in
+<a href="#annexc-detailed-example">Appendix C.4.3, Example  10</a>.</p></div>
+<div id="annexc-demo"><h3>C.4.3. Algorithm demonstration</h3><table id="_d59d832f-fc86-422d-96af-1ad32e670375" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_c0466d97-21be-4c92-a4dc-4b3ab0b4b8c9" class="example">("2018-01-23" + "P1M") resolves to "2018-02-23". There was no overflow
+to be resolved.</p>
+</td></tr></table>
+<table id="_70952006-bcee-4a82-bcbd-00ec2a7a3eff" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_e3875d29-8252-4cfa-8e02-1a4c585b07a7" class="example">Incrementing "2018-12-01" by "P1M" gives "2018-13-01". The month
+component has overflowed (13 &gt; 12) and according to the resolve
+process, the excess should be carried to year, and the month should be
+reset. Results in "2019-01-01".</p>
+</td></tr></table>
+<table id="_2697d83e-7afc-4316-835f-4f617c2b18e0" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_2aaf5b4d-38d0-4518-9927-c30f6c2723ee" class="example">Incrementing "2018-01-31" with "P1M" gives "2018-02-31". The month
+component has no overflow but the day component has. Since the day
+component is of a lower order, the day component is resolved by
+truncation considering "MM-DD", "`02-31" is truncated to "02-28", as
+2018 Feb has only 28 days. Results in "2018-02-28".</p>
+</td></tr></table>
+<table id="_67ebd40b-c112-414d-bbbb-ed0a98b3283d" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  4</td><td valign="top" class="example">
+  <p id="_a2ec4982-43e0-49b2-a413-6d80d2c834d0" class="example">Incrementing "2018-01-23" with "P2M2D" is calculated as
+("2018-01-23" + "P2D") + "P2M".
+The next step becomes "2018-01-25" + "P2M" and results
+in "2018-03-25".</p>
+</td></tr></table>
+<table id="_46d9e096-0521-4d20-b0a7-1de3a13276bd" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  5</td><td valign="top" class="example">
+  <p id="_9ca90070-6a2f-41a0-a5e9-90bd6f0490fd" class="example">Incrementing "2018-01-31" with "P2M2D" is calculated as
+("2018-01-31" + "P2D") + "P2M".
+The next step gives "2018-01-33" + "P2M", then
+"2018-02-02" + "P2M`", and finally "2018-04-02".</p>
+</td></tr></table>
+<table id="_5251fef6-20bd-4122-9477-52ad4876c54c" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  6</td><td valign="top" class="example">
+  <p id="_f8c8b50e-c4c0-4f72-a3a8-232e915d51c7" class="example">Incrementing "2018-01-29" with "P1M2D" is calculated as
+("2018-01-29" + "P2D") + "P1M".
+The next step gives "2018-01-31" + "P2M",
+which results in "2018-02-31", and is resolved to "2018-02-28" via lower order truncation.</p>
+</td></tr></table>
+<table id="_5dcaeb81-7912-4b5a-8f98-11afdc0fc6ac" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  7</td><td valign="top" class="example">
+  <p id="_9791c720-9416-4c9e-a900-fcc6dd5f1df5" class="example">Incrementing "2018-01-29" with "P2M4D" is calculated as ("2018-01-29" + "P4D") + "P2M". The next step gives "2018-01-33" + "P2M", resulting in "2018-02-02" + "P2M" and finally "2018-04-02".</p>
+</td></tr></table>
+<table id="_ab4fc241-dab4-47d4-a8b0-9cf2456053d8" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  8</td><td valign="top" class="example">
+  <p id="_eeb8ea58-5472-4fd5-bd83-56a0b28f3494" class="example">Incrementing "2018-12-01" with "P2M2D" is calculated as ("2018-12-01" + "P2D") + "P2M". Calculation gives "2018-12-03" + "P2M" and then "2018-14-02", which is finally resolved to be "2019-02-02" via carry over.</p>
+</td></tr></table>
+<table id="_cd946658-22f1-4d55-81f4-30f4fc8d42c2" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  9</td><td valign="top" class="example">
+  <p id="_f6a24d66-80b4-4d70-a69e-f4ffe2cac19d" class="example">Incrementing "2018-12-31" with "P2M" results in "2018-14-31", which has to be resolved via carry over to "2019-02-31", and finally resolved via truncation to "2019-02-28".</p>
+</td></tr></table>
+<table id="annexc-detailed-example" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  10</td><td valign="top" class="example">
+  <p id="_16ba1651-35b2-4f5a-93e7-1cc491c7ec33" class="example">Incrementing "2018-12-31" with "P5Y3M1D" results in (("2018-12-31" + "P1D") + "P3M") + "P5Y". It is calculated to be ("2018-12-32" + "P3M") + "P5Y "`, which is then resolved to ("`2019-01-01" + "P3M") + "P5Y" via carry over, and it becomes "2019-04-01" + "P5Y" and finally "2024-04-01".</p>
+</td></tr></table></div></div>
+        <div id="_resolution_of_leap_seconds"><h2>C.5. Resolution of leap seconds</h2><p id="_ec7f0e99-25f7-4704-ba40-4c5004ee25df">There is no universal rule to calculate leap seconds in advance, since
+the decision to insert a leap second is driven by a number of dynamic
+factors and only known when announced by the BIPM.</p>
+<p id="_a7988b74-f64d-416b-8727-4cd9e1a2e0ba">For example, it is unclear whether 2085 will or will not have a leap
+second until a closer date, when BIPM makes such an announcement.</p>
+<p id="_b99e0ded-0aec-4939-b42a-91587e06c06c">To resolve issues that relate to the leap second, in calculations prior
+to knowledge of the leap second, we assume that no leap second will be
+in place. Such that, "59" is always the last second of the year.</p>
+<table id="_2033f953-f531-49e6-ac2d-71cc1955b098" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  1</td><td valign="top" class="example">
+  <p id="_b9ee5460-8ef0-4b49-a9fa-9551c0287848" class="example">"2018-12-31T23:59:59" + PT1M &#x21D2; "2018-12-31T23:60:59" &#x21D2; "2018-12-31T24:00:59" &#x21D2; "2018-12-32T00:00:59" &#x21D2; "2018-13-01T00:00:59" &#x21D2; "2019-01-01T00:00:59" (applies identically with or without leap second)</p>
+</td></tr></table>
+<table id="_9ddc11a8-da85-4246-912b-0fb129d19667" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  2</td><td valign="top" class="example">
+  <p id="_7bd7b9a8-72b8-438d-8598-0de77ca9eda3" class="example">(at a leap second) "2018-12-31T23:59:60" + PT1M &#x21D2; (resolve minutes unit first) "2018-12-31T23:60:60" &#x21D2; "2018-12-31T24:00:60" &#x21D2; "2018-12-32T00:00:60" &#x21D2; "2018-13-01T00:00:60" &#x21D2; "2019-01-01T00:00:60" &#x21D2; (resolve seconds unit) "2019-01-01T00:00:59"</p>
+</td></tr></table>
+<table id="_69e2a876-92d3-4b50-8ac6-194de0821383" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE  3</td><td valign="top" class="example">
+  <p id="_c4a71658-0508-491d-92b0-c85caebca6f3" class="example">(when a year has a leap second) "2018-12-31T23:59:59" + PT1S &#x21D2; "`2018-12-31T23:59:60"</p>
+</td></tr></table></div>
+        <div id="_handling_duration_with_fractions"><h2>C.6. Handling duration with fractions</h2><p id="_033c795b-b698-4fd9-9edf-b998c934d720">It is not always clear what a duration with fractional numbers mean.
+For example, the expression "P0.5M" ("half a month") is ambiguous
+because the exact duration of a calendar month depends on its context
+and that the context for which "P0.5M" is anchored to is unclear.</p>
+<p id="_3d0b0bae-8dd7-4059-b2c8-4472e4c5e73b">The cause of this uncertainty is due to the ambiguity of duration of a
+time scale component. Generally, the exact duration of a calendar month
+is context-dependent, but that of a calendar day is not. The strategy
+is to calculate the fractional duration after knowing the exact
+duration of the unit, such that, the exact duration for the duration
+unit in whole (e.g. "P1M") can be calculated given a context.</p>
+<p id="_886b108f-840c-4338-b29b-2c68d7b0ff34">The algorithm from <a href="#annexc-algorithm">Appendix C.4</a> can be used to first calculate
+the exact duration of the next whole duration of the fractional
+duration, and subsequently the fractional duration can be calculated.</p>
+<p id="_49f1fad0-18ec-442e-af35-716f9669f473">Let the functions:</p>
+<ul id="_55a57391-08d3-4cd0-a9f4-ba674bbfa1fb">
+  <li>
+    <p id="_6bd7d55d-fb24-4895-8c0e-d826491a2ea4">unit(duration) be the value of a single unit used in the duration;</p>
+  </li>
+  <li>
+    <p id="_a5a334b9-92c3-453f-8dd3-836ae518f863">value(duration) be the fractional value used with the duration.</p>
+  </li>
+  <li>
+    <p id="_50607b44-ca8c-4422-a6e0-f3fc688bc0ad">duration(date1, date2) is the function to calculate the duration between two dates or times.</p>
+  </li>
+</ul>
+<p id="_3b2f9495-8f68-4a60-a62b-ec1fc9152403">The calculation of a "date + duration" can be rephrased into:</p>
+<p id="_d4b3455c-dbc5-4672-af31-57dab0a3760e" class="Sourcecode">date&#xA0;+&#xA0;duration&#xA0;=&#xA0;duration(resolve(date,&#xA0;unit(duration))),&#xA0;date)&#xA0;&#xD7;&#xA0;value(duration)&#xA0;+&#xA0;date</p>
+<p id="_5fe9c97c-ebac-455e-befd-feae9d21e132">Given that "resolve(date, unit(duration))" can be calculated, this
+formula will always produce a value with consistency.</p>
+<table id="_95955afd-4bb5-49ec-9c62-bd917d117b79" class="example"><tr><td valign="top" class="example_label" style="width:82.8pt;">EXAMPLE</td><td valign="top" class="example">
+  <p id="_3fa0978e-786a-484e-b79e-17940c58c84f" class="example">Given the increment of "2018-01-23" with "P0.5M", it can be rephrased as duration(resolve("2018-01-23", "P1M"), "2018-01-23") &#xD7; 0.5 + "2018-01-23". It is reduced to duration( "2018-02-23", "2018-01-23") and then "P31D" &#xD7; 0.5 + "2018-01-23", and hence "P15.5D" + "2018-01-23". Since "P15.5D" is an exact duration, "P15.5D" + "2018-01-23" is resolvable and gives us the final result as "2018-02-07T12:00:00`".</p>
+</td></tr></table></div>
+      </div>
+      <br />
+      <div>
+        <h1 class="Section3">Bibliography</h1>
+        <p id="ISOIEC646" class="Biblio">[1]&#xA0; 646, <i> Information technology -- ISO 7-bit coded character set for information interchange</i></p>
+        <p id="ISO8601-1" class="Biblio">[2]&#xA0; ISO 8601-1, Date and time&#x2009;&#x2014;&#x2009;Representation for information interchange&#x2009;&#x2014;&#x2009;Part 1: Basic rules</p>
+        <p id="RFC5545" class="Biblio">[3]&#xA0; RFC 5545, Internet Calendaring and Scheduling Core Object Specification (iCalendar)</p>
+      </div>
+      <aside id="fn:1" class="footnote">
+  <p id="_8a44aab5-7300-415e-bf2f-2a66a57bb7bc"><a rel="footnote" href="#fn:1" epub:type="footnote" id="fnref:1"><sup>1</sup></a>Under preparation. (Stage at the time of publication CC/DS 18011)</p>
+<a href="#fnref:1">&#x21A9;</a></aside>
+    </main>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    asciimath2jax: {
+      delimiters: [['(#(', ')#)']]
+    }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=AM_HTMLorMML"></script>
+<script>
+    //TOC generation
+      $('#toc').toc({
+          'selectors': 'h1,h2:not(.TermNum)', //elements to use as headings
+          'container': 'main', //element to find all selectors in
+          'smoothScrolling': true, //enable or disable smooth scrolling on click
+          'prefix': 'toc', //prefix for anchor tags and class names
+          'onHighlight': function(el) {}, //called when a new section is highlighted 
+          'highlightOnScroll': true, //add class to heading that is currently in focus
+          'highlightOffset': 100, //offset to trigger the next headline
+          'anchorName': function(i, heading, prefix) { //custom function for anchor name
+              return prefix+i;
+          },
+          'headerText': function(i, heading, $heading) { //custom function building the header-item text
+              return $heading.text();
+          },
+      'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+        return $heading[0].tagName.toLowerCase();
+      }
+      });
+      
+  </script>
+
+<script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('.container').animate({ 'padding-left': '31px' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('.container').animate({ 'padding-left': '360px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <script>
+/**
+ * AnchorJS - v4.1.0 - 2017-09-20
+ * https://github.com/bryanbraun/anchorjs
+ * Copyright (c) 2017 Bryan Braun; Licensed MIT
+ */
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function e(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64}function t(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}function i(){if(null===document.head.querySelector("style.anchorjs")){var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"], style'))?document.head.appendChild(e):document.head.insertBefore(e,A),e.sheet.insertRule(" .anchorjs-link {   opacity: 0;   text-decoration: none;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; }",e.sheet.cssRules.length),e.sheet.insertRule(" *:hover > .anchorjs-link, .anchorjs-link:focus  {   opacity: 1; }",e.sheet.cssRules.length),e.sheet.insertRule(" [data-anchorjs-icon]::after {   content: attr(data-anchorjs-icon); }",e.sheet.cssRules.length),e.sheet.insertRule(' @font-face {   font-family: "anchorjs-icons";   src: url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype"); }',e.sheet.cssRules.length)}}this.options=A||{},this.elements=[],e(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var n,o,s,a,r,c,h,l,u,d,f,p=[];if(e(this.options),"touch"===(f=this.options.visible)&&(f=this.isTouchDevice()?"always":"hover"),A||(A="h2, h3, h4, h5, h6"),0===(n=t(A)).length)return this;for(i(),o=document.querySelectorAll("[id]"),s=[].map.call(o,function(A){return A.id}),r=0;r<n.length;r++)if(this.hasAnchorJSLink(n[r]))p.push(r);else{if(n[r].hasAttribute("id"))a=n[r].getAttribute("id");else if(n[r].hasAttribute("data-anchor-id"))a=n[r].getAttribute("data-anchor-id");else{u=l=this.urlify(n[r].textContent),h=0;do{void 0!==c&&(u=l+"-"+h),c=s.indexOf(u),h+=1}while(-1!==c);c=void 0,s.push(u),n[r].setAttribute("id",u),a=u}a.replace(/-/g," "),(d=document.createElement("a")).className="anchorjs-link "+this.options.class,d.href="#"+a,d.setAttribute("aria-label",this.options.ariaLabel),d.setAttribute("data-anchorjs-icon",this.options.icon),"always"===f&&(d.style.opacity="1"),""===this.options.icon&&(d.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(d.style.lineHeight="inherit")),"left"===this.options.placement?(d.style.position="absolute",d.style.marginLeft="-1em",d.style.paddingRight="0.5em",n[r].insertBefore(d,n[r].firstChild)):(d.style.paddingLeft="0.375em",n[r].appendChild(d))}for(r=0;r<p.length;r++)n.splice(p[r]-r,1);return this.elements=this.elements.concat(n),this},this.remove=function(A){for(var e,i,n=t(A),o=0;o<n.length;o++)(i=n[o].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(n[o]))&&this.elements.splice(e,1),n[o].removeChild(i));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){var t=/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\]/g;return this.options.truncate||e(this.options),A.trim().replace(/\'/gi,"").replace(t,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&(" "+A.firstChild.className+" ").indexOf(" anchorjs-link ")>-1,t=A.lastChild&&(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ")>-1;return e||t||!1}}});  </script>
+
+  <script>
+  $(document).ready(function() {
+          $('[id^=toc]').each(function ()
+          {
+             var currentToc = $(this);
+       var url = window.location.href;
+             currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "' </a>");
+          });
+});
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script></body>
+</html>

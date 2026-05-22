@@ -1,5 +1,0 @@
-# .metanorma/channels.yml — cc-general-recurrence
-
-channels:
-  - name: public/standards
-    description: "CalConnect documents from cc-general-recurrence"

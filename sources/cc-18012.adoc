@@ -20,6 +20,12 @@
 
 include::sections/0a-foreword.adoc[]
 
+[abstract]
+== Abstract
+
+This document provides a generalized representation of selection rules and recurring time intervals with repeat rules, in line with the time scale components and date and time representations of ISO 8601-1. The representations describe a superset of the RECUR recurrence rules of RFC 5545 while aiming to maintain compatibility with them. Only date elements from the Gregorian calendar and times from the 24-hour clock are supported.
+
+
 include::sections/0b-intro.adoc[]
 
 include::sections/01-scope.adoc[]
